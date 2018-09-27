@@ -1,24 +1,23 @@
 ﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal {
-    public class AntlionChargerSoul : ModItem {
+    public class AntlionChargerSoul : Soul {
         public override void SetStaticDefaults() {
             DisplayName.SetDefault("AntlionCharger's Soul");
             Tooltip.SetDefault("Allows Sprinting");
         }
-
-        public override void SetDefaults() {
-            Tervania.ListSoul.Add(item.type);
-            item.width = 22;
-            item.height = 20;
-            item.value = Item.buyPrice(0, 0, 10, 0);
-            item.rare = 2;
-            item.accessory = true;
-        }
+        public AntlionChargerSoul() : base(2, Item.buyPrice(0, 0, 10, 0)) { }
 
         public override void UpdateAccessory(Player player, bool hideVisual) {
             player.accRunSpeed += 5;
+        }
+    }
+
+    public class AntlionChargerSoulDrop : GlobalNPC {
+        public override void NPCLoot(NPC npc) {
+            if (npc.type == NPCID.WalkingAntlion) Tervania.DropItem(npc, 100f, mod.ItemType<Items.Souls.Normal.AntlionChargerSoul>());
         }
     }
 }
