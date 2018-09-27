@@ -1,2 +1,2 @@
-# Drak Solz
+# Tervania Mod
 Terraria Mod using TModLoader
