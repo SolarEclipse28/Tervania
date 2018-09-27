@@ -5,11 +5,11 @@ namespace Tervania.Items.Souls.Normal {
     public class BlueSlimeSoul : ModItem {
         public override void SetStaticDefaults() {
             DisplayName.SetDefault("Blue Slime's Soul");
-            Tooltip.SetDefault("Grants Higher Jumps"/* +
-                "\n+5% Move Speed"*/);
+            Tooltip.SetDefault("Grants Higher Jumps");
         }
 
         public override void SetDefaults() {
+            Tervania.ListSoul.Add(item.type);
             item.width = 22;
             item.height = 20;
             item.value = Item.buyPrice(0, 0, 10, 0);
