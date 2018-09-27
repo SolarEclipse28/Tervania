@@ -1,2 +1,2 @@
-# Tervania
-Castlevania style mod for Terraria
+# Drak Solz
+Terraria Mod using TModLoader
