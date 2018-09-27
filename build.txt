@@ -1,6 +1,6 @@
-author = Xahlicem, SolarEclipse28
+author = SolarEclipse28, Xahlicem
 version = 0.2
-displayName = Drak Solz
+displayName = Tervania
 hideCode = false
 hideResources = false
 includeSource = true
