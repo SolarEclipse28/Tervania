@@ -94,8 +94,6 @@ namespace Tervania {
         public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath) {
             Item item = new Item();
             item.netDefaults(mod.ItemType<Items.Misc.InfoBook>());
-            //item.GetGlobalItem<TGlobalItem>().Owned = true;
-            //item.GetGlobalItem<TGlobalItem>().FromPlayer = player.whoAmI;
             items.Add(item);
         }
 
