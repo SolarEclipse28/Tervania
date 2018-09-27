@@ -18,6 +18,7 @@ namespace Tervania {
     public class Tervania : Mod {
         internal static Tervania instance;
         public static List<int> ListBossSoul { get; set; }
+        public static List<int> ListSoul { get; set; }
 
         private UserInterface userInterface;
         private UserInterface userInterfacePlayer;
@@ -59,6 +60,7 @@ namespace Tervania {
                     NPCID.Golem, NPCID.GolemFistLeft, NPCID.GolemFistRight, NPCID.GolemHead, NPCID.GolemHeadFree, NPCID.CultistBoss, NPCID.DukeFishron,
                     NPCID.MoonLordCore, NPCID.MoonLordFreeEye, NPCID.MoonLordHand, NPCID.MoonLordHead
             });
+            ListSoul = new List<int>();
 
             if (Main.dedServ) return;
         }

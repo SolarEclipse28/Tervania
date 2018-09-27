@@ -1,5 +1,5 @@
 author = SolarEclipse28, Xahlicem
-version = 0.2
+version = 0.1
 displayName = Tervania
 hideCode = false
 hideResources = false
