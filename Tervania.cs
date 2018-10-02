@@ -23,6 +23,8 @@ namespace Tervania {
         private UserInterface userInterface;
         private UserInterface userInterfacePlayer;
 
+		public static ModHotKey BulletSoulHotKey;
+
         public Tervania() {
 
             Properties = new ModProperties() {
@@ -48,6 +50,18 @@ namespace Tervania {
             return AdjustMagnitude(ref vector, speed, speed);
         }
 
+        public static void RechargeEffect(Player player) {
+            Main.PlaySound(25, -1, -1, 1, 1f, 0.0f);
+            for (int index1 = 0; index1 < 5; ++index1) {
+                int index2 = Dust.NewDust(player.position, player.width, player.height, 45, 0.0f, 0.0f, (int) byte.MaxValue, default(Color), (float) Main.rand.Next(20, 26) * 0.1f);
+                Main.dust[index2].noLight = true;
+                Main.dust[index2].noGravity = true;
+                Dust dust = Main.dust[index2];
+                Vector2 vector2 = dust.velocity * 0.5f;
+                dust.velocity = vector2;
+            }
+        }
+
         public static int DropItem(NPC npc, float chance, params int[] types) {
             if (Main.rand.NextFloat(100f) > chance) return 0;
             return Item.NewItem(npc.Center, npc.width, npc.height, Utils.SelectRandom(Main.rand, types));
@@ -60,6 +74,8 @@ namespace Tervania {
 
         public override void Load() {
             instance = this;
+
+            BulletSoulHotKey = RegisterHotKey("Bullet Soul", "F");
 
             ListBossSoul = new List<int>();
             ListBossSoul.AddRange(new int[] {
@@ -78,6 +94,7 @@ namespace Tervania {
         public override void Unload() {
             ListBossSoul = null;
             instance = null;
+            BulletSoulHotKey = null;
             if (!Main.dedServ) {
                 //VoidPillarGlowMask.Unload();
             }
