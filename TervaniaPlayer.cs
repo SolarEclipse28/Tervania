@@ -14,29 +14,46 @@ namespace Tervania {
 
     public class TervaniaPlayer : ModPlayer {
         public BulletSoul BulletSoul { get; set; }
+        public GuardianSoul GuardianSoul { get; set; }
 
         public bool Rotate { get; set; }
         public float Rotation { get; set; }
 
+        private bool useBulletSoul = true;
+
         public override void Initialize() {
             BulletSoul = null;
+            GuardianSoul = null;
+            useBulletSoul = true;
 
             Rotation = 0f;
         }
 
         public override void ResetEffects() {
             BulletSoul = null;
-            Rotate = false;
+            GuardianSoul = null;
 
+            Rotate = false;
             player.fullRotationOrigin = player.Center - player.position;
             player.fullRotation = Rotation;
         }
 
         public override void ProcessTriggers(TriggersSet triggersSet) {
-            if (Tervania.BulletSoulHotKey.JustPressed) {
-                if (BulletSoul == null) return;
-                BulletSoul.Use(player);
-                Main.NewText(BulletSoul.Name, default(Color));
+            if (!player.controlUseItem) useBulletSoul = true;
+
+            if (player.controlUp && player.controlUseItem) {
+                player.controlUseItem = false;
+                if (useBulletSoul && BulletSoul != null) {
+                    useBulletSoul = false;
+                    BulletSoul.Use(player);
+                    Main.NewText(BulletSoul.Name, default(Color));
+                }
+            }
+
+            if (Tervania.GuardianSoulHotKey.Current) {
+                if (GuardianSoul == null) return;
+                GuardianSoul.Use(player);
+                Main.NewText(GuardianSoul.Name, default(Color));
             }
         }
 

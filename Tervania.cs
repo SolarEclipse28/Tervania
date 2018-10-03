@@ -23,7 +23,7 @@ namespace Tervania {
         private UserInterface userInterface;
         private UserInterface userInterfacePlayer;
 
-		public static ModHotKey BulletSoulHotKey;
+		public static ModHotKey GuardianSoulHotKey;
 
         public Tervania() {
 
@@ -75,7 +75,7 @@ namespace Tervania {
         public override void Load() {
             instance = this;
 
-            BulletSoulHotKey = RegisterHotKey("Bullet Soul", "F");
+            GuardianSoulHotKey = RegisterHotKey("Bullet Soul", "F");
 
             ListBossSoul = new List<int>();
             ListBossSoul.AddRange(new int[] {
@@ -94,7 +94,7 @@ namespace Tervania {
         public override void Unload() {
             ListBossSoul = null;
             instance = null;
-            BulletSoulHotKey = null;
+            GuardianSoulHotKey = null;
             if (!Main.dedServ) {
                 //VoidPillarGlowMask.Unload();
             }

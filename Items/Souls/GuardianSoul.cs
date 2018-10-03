@@ -4,11 +4,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal {
-    public class BulletSoul : Soul {
+    public class GuardianSoul : Soul {
         public int IShoot { get; internal set; }
         public int IMana { get; internal set; }
         public int IUseTime { get; internal set; }
-        public BulletSoul(int mana = 5, int useTime = 90, int rare = 2, int value = 10, string name = "Bullet Soul", string tooltip = "Soul of the fallen."):
+        public GuardianSoul(int mana = 2, int useTime = 45, int rare = 2, int value = 10, string name = "Guardian Soul", string tooltip = "Soul of the fallen."):
             base(rare, value, name, tooltip) {
                 IMana = mana;
                 IUseTime = useTime;
@@ -16,22 +16,20 @@ namespace Tervania.Items.Souls.Normal {
 
         public override void SetDefaults() {
             base.SetDefaults();
-            item.damage = 5;
             item.useTime = IUseTime / IMana;
             item.mana = IMana;
             item.knockBack = 2f;
             item.shootSpeed = 20.0f;
             item.shoot = 1;
-            item.crit = 15;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual) {
-            player.GetModPlayer<TervaniaPlayer>().BulletSoul = this;
-            if (item.mana == 0) return;
+            player.GetModPlayer<TervaniaPlayer>().GuardianSoul = this;
+            if (item.mana == IMana) return;
             item.useTime--;
             if (item.useTime <= 0) {
-                if (item.mana == 1) Tervania.RechargeEffect(player);
                 item.mana--;
+                if (item.mana == 0) Tervania.RechargeEffect(player);
                 item.useTime = IUseTime / IMana;
             }
         }
@@ -40,21 +38,20 @@ namespace Tervania.Items.Souls.Normal {
             return false;
         }
 
-        public virtual void Use(Player player, Vector2 dir) {
-            if (player.statMana < item.mana) return;
-            player.statMana -= item.mana;
-            item.mana += IMana;
-            Projectile.NewProjectile(player.Center, Tervania.AdjustMagnitude(ref dir, item.shootSpeed, item.shootSpeed), item.shoot, item.damage, item.knockBack, player.whoAmI);
-        }
-
-        public virtual void Use(Player player) {
-            Use(player, new Vector2(Main.mouseX - Main.screenWidth / 2, Main.mouseY - Main.screenHeight / 2));
+        public virtual bool Use(Player player) {
+            if (player.statMana < item.mana) return false;
+            if (item.useTime == IUseTime / IMana) {
+                player.statMana -= item.mana;
+                item.mana += IMana;
+            }
+            player.manaRegenCount = 0;
+            return true;
         }
 
         public override TooltipLine GetTooltip() {
             if (line != null) return line;
-            line = new TooltipLine(mod, "SoulType", "Bullet Soul");
-            line.overrideColor = Color.LightPink;
+            line = new TooltipLine(mod, "SoulType", "Guardian Soul");
+            line.overrideColor = Color.LightBlue;
             return line;
         }
     }
