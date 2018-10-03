@@ -50,7 +50,7 @@ namespace Tervania.Items.Souls {
         public virtual TooltipLine GetTooltip() {
             if (line != null) return line;
             line = new TooltipLine(mod, "SoulType", "Enchanted Soul");
-            line.overrideColor = Color.LightGoldenrodYellow;
+            line.overrideColor = new Color(255, 255, 100);
             return line;
         }
 
