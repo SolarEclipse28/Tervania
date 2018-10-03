@@ -22,7 +22,7 @@ namespace Tervania.Items.Souls.Normal {
             item.knockBack = 2f;
             item.shootSpeed = 20.0f;
             item.shoot = 1;
-            item.crit = 15;
+            item.crit = 4;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual) {
@@ -40,11 +40,15 @@ namespace Tervania.Items.Souls.Normal {
             return false;
         }
 
+        public virtual int CreateProjectile(Player player, ref Vector2 dir) {
+            return Projectile.NewProjectile(player.Center, Tervania.AdjustMagnitude(ref dir, item.shootSpeed, item.shootSpeed), item.shoot, item.damage, item.knockBack, player.whoAmI);
+        }
+
         public virtual void Use(Player player, Vector2 dir) {
             if (player.statMana < item.mana) return;
             player.statMana -= item.mana;
             item.mana += IMana;
-            Projectile.NewProjectile(player.Center, Tervania.AdjustMagnitude(ref dir, item.shootSpeed, item.shootSpeed), item.shoot, item.damage, item.knockBack, player.whoAmI);
+            CreateProjectile(player, ref dir);
         }
 
         public virtual void Use(Player player) {
