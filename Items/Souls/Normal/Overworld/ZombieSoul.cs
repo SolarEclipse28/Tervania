@@ -1,19 +1,24 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.DataStructures;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
-    public class ZombieSoul : GuardianSoul {
-        public ZombieSoul() : base(2, 45, 3, Item.buyPrice(0, 0, 25, 0), "Zombie's Soul", "Lowers maximum life, fills belly") { }
+    public class ZombieSoul : BulletSoul {
+        public ZombieSoul() : base(10, 240, 2, Item.buyPrice(0, 0, 10, 0), "Zombie's Soul", "Hurts you, fills your belly") { }
 
-        public override bool Use(Player player) {
-            if (base.Use(player)) {
-                player.statLifeMax2 = (int) (player.statLifeMax2 * 0.75f);
-                player.AddBuff(BuffID.WellFed, 5);
-            }
-            return false;
+        public override void SetDefaults() {
+            base.SetDefaults();
+            item.damage = 20;
+            item.useTime = IUseTime / IMana;
+            item.mana = IMana;
         }
 
+        public override void Use(Player player, bool shoot = false) {
+            base.Use(player, false);
+            player.Hurt(PlayerDeathReason.ByCustomReason("ate themselves"), item.damage, 0);
+            player.AddBuff(BuffID.WellFed, 3000);
+        }
     }
 
     public class ZombieSoulDrop : GlobalNPC {

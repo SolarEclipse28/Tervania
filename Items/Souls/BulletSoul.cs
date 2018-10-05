@@ -39,14 +39,14 @@ namespace Tervania.Items.Souls {
 
         public virtual int CreateProjectile(Player player, ref Vector2 dir) => Projectile.NewProjectile(player.Center, Tervania.AdjustMagnitude(ref dir, item.shootSpeed, item.shootSpeed), item.shoot, item.damage, item.knockBack, player.whoAmI);
 
-        public virtual void Use(Player player, Vector2 dir) {
+        public virtual void Use(Player player, Vector2 dir, bool shoot = true) {
             if (player.statMana < item.mana) return;
             player.statMana -= item.mana;
             item.mana += IMana;
-            CreateProjectile(player, ref dir);
+            if (shoot) CreateProjectile(player, ref dir);
         }
 
-        public virtual void Use(Player player) => Use(player, new Vector2(Main.mouseX - Main.screenWidth / 2, Main.mouseY - Main.screenHeight / 2));
+        public virtual void Use(Player player, bool shoot = true) => Use(player, new Vector2(Main.mouseX - Main.screenWidth / 2, Main.mouseY - Main.screenHeight / 2), shoot);
 
         public override TooltipLine GetTooltip() {
             if (line != null) return line;
