@@ -94,7 +94,7 @@ namespace Tervania {
         }
 
         public void SetESoul(Item soul, bool swap = false) {
-            if (swap) SwapItem(soul, guardianSoul);
+            if (swap) SwapItem(soul, enchantedSoul);
             enchantedSoul = soul.Clone();
             Tervania.instance.ui.UpdateSouls();
         }

@@ -1,12 +1,19 @@
 ﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
-    public class BlueSlimeSoul : EnchantedSoul {
-        public BlueSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Blue Slime's Soul", "Grants Higher Jumps") { }
+    public class BlueSlimeSoul : BulletSoul {
+        public BlueSlimeSoul() : base(5, 150, 2, Item.buyPrice(0, 0, 10, 0), "Blue Slime's Soul", "Shoots a stream of deadly luke-warm water") { }
 
-        public override void UpdateAccessory(Player player, bool hideVisual) {
-            player.jumpSpeedBoost += 2;
+        public override void SetDefaults() {
+            base.SetDefaults();
+            item.damage = 5;
+            item.useTime = IUseTime / IMana;
+            item.mana = IMana;
+            item.knockBack = 0.5f;
+            item.shootSpeed = 20.0f;
+            item.shoot = ProjectileID.WaterStream;
         }
     }
 
