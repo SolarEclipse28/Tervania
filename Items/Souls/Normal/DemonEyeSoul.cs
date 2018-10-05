@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal {
-    public class DemonEyeSoul : Soul {
+    public class DemonEyeSoul : EnchantedSoul {
         public DemonEyeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Demon Eye's Soul", "Extra Jump") { }
 
         public override void UpdateAccessory(Player player, bool hideVisual) {

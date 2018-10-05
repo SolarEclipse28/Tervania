@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal {
-    public class LavaSlimeSoul : Soul {
+    public class LavaSlimeSoul : EnchantedSoul {
         public LavaSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Lava Slime's Soul", "Swim in lava!") { }
 
         public override void UpdateAccessory(Player player, bool hideVisual) {

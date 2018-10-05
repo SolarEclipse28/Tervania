@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal {
-    public class BlueSlimeSoul : Soul {
+    public class BlueSlimeSoul : EnchantedSoul {
         public BlueSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Blue Slime's Soul", "Grants Higher Jumps") { }
 
         public override void UpdateAccessory(Player player, bool hideVisual) {

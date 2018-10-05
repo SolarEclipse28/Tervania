@@ -9,8 +9,7 @@ namespace Tervania.Items.Souls.Normal {
         public override bool Use(Player player) {
             if (base.Use(player)) {
                 player.slowFall = true;
-                player.maxFallSpeed *= 0.25f;
-                player.AddBuff(BuffID.Slimed, 5);
+                player.drippingSlime = true;
             }
             return false;
         }

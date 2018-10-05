@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Tervania.Items.Souls.Normal {
+namespace Tervania.Items.Souls.Normal.Ice {
     public class SpikedIceSlimeSoul : BulletSoul {
         public SpikedIceSlimeSoul() : base(10, 60, 2, Item.buyPrice(0, 0, 10, 0), "Spiked Ice Slime's Soul", "Shoots icey spikes!") { }
 
@@ -26,7 +26,7 @@ namespace Tervania.Items.Souls.Normal {
 
     public class SpikedIceSlimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.SpikedIceSlime) Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.SpikedIceSlimeSoul>());
+            if (npc.type == NPCID.SpikedIceSlime) Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Ice.SpikedIceSlimeSoul>());
         }
     }
 }

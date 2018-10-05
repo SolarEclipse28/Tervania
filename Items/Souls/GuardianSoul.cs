@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Tervania.Items.Souls.Normal {
+namespace Tervania.Items.Souls {
     public class GuardianSoul : Soul {
         public int IShoot { get; internal set; }
         public int IMana { get; internal set; }
@@ -18,13 +18,10 @@ namespace Tervania.Items.Souls.Normal {
             base.SetDefaults();
             item.useTime = IUseTime / IMana;
             item.mana = IMana;
-            item.knockBack = 2f;
-            item.shootSpeed = 20.0f;
-            item.shoot = 1;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual) {
-            player.GetModPlayer<TervaniaPlayer>().GuardianSoul = this;
+            if (Tervania.GuardianSoulHotKey.Current) Use(player);
             if (item.mana == IMana) return;
             item.useTime--;
             if (item.useTime <= 0) {
@@ -32,11 +29,10 @@ namespace Tervania.Items.Souls.Normal {
                 if (item.mana == 0) Tervania.RechargeEffect(player);
                 item.useTime = IUseTime / IMana;
             }
+
         }
 
-        public override bool CanUseItem(Player player) {
-            return false;
-        }
+        public override void RightClick(Player player) => player.GetModPlayer<TervaniaPlayer>().SetGSoul(item, true);
 
         public virtual bool Use(Player player) {
             if (player.statMana < item.mana) return false;

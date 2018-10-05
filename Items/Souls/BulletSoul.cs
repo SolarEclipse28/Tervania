@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Tervania.Items.Souls.Normal {
+namespace Tervania.Items.Souls {
     public class BulletSoul : Soul {
         public int IShoot { get; internal set; }
         public int IMana { get; internal set; }
@@ -26,7 +26,7 @@ namespace Tervania.Items.Souls.Normal {
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual) {
-            player.GetModPlayer<TervaniaPlayer>().BulletSoul = this;
+            if (player.GetModPlayer<TervaniaPlayer>().UseBulletSoul == 1) Use(player);
             if (item.mana == 0) return;
             item.useTime--;
             if (item.useTime <= 0) {
@@ -35,14 +35,9 @@ namespace Tervania.Items.Souls.Normal {
                 item.useTime = IUseTime / IMana;
             }
         }
+        public override void RightClick(Player player) => player.GetModPlayer<TervaniaPlayer>().SetBSoul(item, true);
 
-        public override bool CanUseItem(Player player) {
-            return false;
-        }
-
-        public virtual int CreateProjectile(Player player, ref Vector2 dir) {
-            return Projectile.NewProjectile(player.Center, Tervania.AdjustMagnitude(ref dir, item.shootSpeed, item.shootSpeed), item.shoot, item.damage, item.knockBack, player.whoAmI);
-        }
+        public virtual int CreateProjectile(Player player, ref Vector2 dir) => Projectile.NewProjectile(player.Center, Tervania.AdjustMagnitude(ref dir, item.shootSpeed, item.shootSpeed), item.shoot, item.damage, item.knockBack, player.whoAmI);
 
         public virtual void Use(Player player, Vector2 dir) {
             if (player.statMana < item.mana) return;
@@ -51,9 +46,7 @@ namespace Tervania.Items.Souls.Normal {
             CreateProjectile(player, ref dir);
         }
 
-        public virtual void Use(Player player) {
-            Use(player, new Vector2(Main.mouseX - Main.screenWidth / 2, Main.mouseY - Main.screenHeight / 2));
-        }
+        public virtual void Use(Player player) => Use(player, new Vector2(Main.mouseX - Main.screenWidth / 2, Main.mouseY - Main.screenHeight / 2));
 
         public override TooltipLine GetTooltip() {
             if (line != null) return line;

@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal {
-    public class GreenSlimeSoul : Soul {
+    public class GreenSlimeSoul : EnchantedSoul {
         public GreenSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Green Slime's Soul", "+10% Move Speed") { }
 
         public override void UpdateAccessory(Player player, bool hideVisual) {

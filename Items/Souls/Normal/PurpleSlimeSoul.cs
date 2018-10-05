@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal {
-    public class PurpleSlimeSoul : Soul {
+    public class PurpleSlimeSoul : EnchantedSoul {
         public PurpleSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Purple Slime's Soul", "Safer Falls") { }
 
         public override void UpdateAccessory(Player player, bool hideVisual) {

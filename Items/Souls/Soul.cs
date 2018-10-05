@@ -1,8 +1,8 @@
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using System.Collections.Generic;
 
 namespace Tervania.Items.Souls {
     public abstract class Soul : ModItem {
@@ -33,11 +33,9 @@ namespace Tervania.Items.Souls {
             item.height = 20;
             item.value = IValue;
             item.rare = IRare;
-            item.accessory = true;
+            item.consumable = false;
         }
-        public override void GrabRange(Player player, ref int grabRange) {
-            grabRange *= 2;
-        }
+        public override void GrabRange(Player player, ref int grabRange) => grabRange *= 2;
 
         public override bool GrabStyle(Player player) {
             Vector2 vectorItemToPlayer = item.Center - player.Center;
@@ -47,15 +45,17 @@ namespace Tervania.Items.Souls {
             return true;
         }
 
+        public override bool CanUseItem(Player player) => false;
+
+        public override bool CanRightClick() => true;
+
         public virtual TooltipLine GetTooltip() {
             if (line != null) return line;
-            line = new TooltipLine(mod, "SoulType", "Enchanted Soul");
-            line.overrideColor = new Color(255, 255, 100);
+            line = new TooltipLine(mod, "SoulType", "Soul");
+            line.overrideColor = Color.Black;
             return line;
         }
 
-        public override void ModifyTooltips(List<TooltipLine> tooltips) {
-            tooltips.Insert(1, GetTooltip());
-        }
+        public override void ModifyTooltips(List<TooltipLine> tooltips) => tooltips.Insert(1, GetTooltip());
     }
 }

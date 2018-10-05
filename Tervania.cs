@@ -14,6 +14,8 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.UI;
 
+using Tervania.UI;
+
 namespace Tervania {
     public class Tervania : Mod {
         internal static Tervania instance;
@@ -21,9 +23,9 @@ namespace Tervania {
         public static List<int> ListSoul { get; set; }
 
         private UserInterface userInterface;
-        private UserInterface userInterfacePlayer;
+        internal SoulUI ui;
 
-		public static ModHotKey GuardianSoulHotKey;
+        public static ModHotKey GuardianSoulHotKey;
 
         public Tervania() {
 
@@ -75,7 +77,7 @@ namespace Tervania {
         public override void Load() {
             instance = this;
 
-            GuardianSoulHotKey = RegisterHotKey("Bullet Soul", "F");
+            GuardianSoulHotKey = RegisterHotKey("Guardian Soul", "F");
 
             ListBossSoul = new List<int>();
             ListBossSoul.AddRange(new int[] {
@@ -89,6 +91,10 @@ namespace Tervania {
             ListSoul = new List<int>();
 
             if (Main.dedServ) return;
+            ui = new SoulUI();
+            ui.Activate();
+            userInterface = new UserInterface();
+            userInterface.SetState(ui);
         }
 
         public override void Unload() {
@@ -97,6 +103,22 @@ namespace Tervania {
             GuardianSoulHotKey = null;
             if (!Main.dedServ) {
                 //VoidPillarGlowMask.Unload();
+            }
+        }
+
+        public override void ModifyInterfaceLayers(System.Collections.Generic.List<GameInterfaceLayer> layers) {
+            int MouseTextIndex = layers.FindIndex(layer => layer.Name.Equals("Vanilla: Mouse Text"));
+            if (MouseTextIndex != -1) {
+                layers.Insert(MouseTextIndex, new LegacyGameInterfaceLayer(
+                    "DrakSolz: Souls",
+                    delegate {
+                        if (SoulUI.visible) {
+                            userInterface.Update(Main._drawInterfaceGameTime);
+                            ui.Draw(Main.spriteBatch);
+                        }
+                        return true;
+                    },
+                    InterfaceScaleType.UI));
             }
         }
         public override void PostSetupContent() {
