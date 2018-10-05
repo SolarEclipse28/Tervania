@@ -13,7 +13,6 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.UI;
-
 using Tervania.UI;
 
 namespace Tervania {
@@ -28,7 +27,6 @@ namespace Tervania {
         public static ModHotKey GuardianSoulHotKey;
 
         public Tervania() {
-
             Properties = new ModProperties() {
                 Autoload = true,
                 AutoloadGores = true,

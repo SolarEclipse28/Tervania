@@ -88,6 +88,7 @@ namespace Tervania {
         /// Load the mod settings.
         /// </summary>
         public override void Load(TagCompound tag) {
+            Tervania.instance.ui.Refresh();
             SetESoul(ItemIO.Load(tag.GetCompound(EnchantedSoulTag)));
             SetBSoul(ItemIO.Load(tag.GetCompound(BulletSoulTag)));
             SetGSoul(ItemIO.Load(tag.GetCompound(GuardianSoulTag)));

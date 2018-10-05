@@ -88,6 +88,8 @@ namespace Tervania.UI {
             gPanel.RemoveAllChildren();
         }
 
+        public void Refresh() => player = null;
+
         protected override void DrawSelf(SpriteBatch spriteBatch) {
             if (player == null) player = Main.LocalPlayer.GetModPlayer<TervaniaPlayer>();
             Vector2 MousePosition = new Vector2((float) Main.mouseX, (float) Main.mouseY);
