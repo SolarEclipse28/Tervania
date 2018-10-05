@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 
-namespace Tervania.Items.Souls.Normal {
+namespace Tervania.Items.Souls.Normal.Overworld {
     public class BlueSlimeSoul : EnchantedSoul {
         public BlueSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Blue Slime's Soul", "Grants Higher Jumps") { }
 
@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal {
 
     public class BlueSlimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Blue Slime") Tervania.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.BlueSlimeSoul>());
+            if (npc.TypeName == "Blue Slime") Tervania.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Overworld.BlueSlimeSoul>());
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 
-namespace Tervania.Items.Souls.Normal {
+namespace Tervania.Items.Souls.Normal.Overworld {
     public class PurpleSlimeSoul : EnchantedSoul {
         public PurpleSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Purple Slime's Soul", "Safer Falls") { }
 
@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal {
 
     public class PurpleSlimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Purple Slime") Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.PurpleSlimeSoul>());
+            if (npc.TypeName == "Purple Slime") Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Overworld.PurpleSlimeSoul>());
         }
     }
 }
