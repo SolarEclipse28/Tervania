@@ -16,7 +16,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
         public override void Use(Player player, bool shoot = false) {
             base.Use(player, false);
-            player.Hurt(PlayerDeathReason.ByCustomReason("ate themselves"), item.damage, 0);
+            player.Hurt(PlayerDeathReason.ByCustomReason(player.name + " ate themselves"), item.damage, 0);
             player.AddBuff(BuffID.WellFed, 3000);
         }
     }
