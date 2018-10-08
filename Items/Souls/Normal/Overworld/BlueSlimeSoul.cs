@@ -15,6 +15,8 @@ namespace Tervania.Items.Souls.Normal.Overworld {
             item.shootSpeed = 20.0f;
             item.shoot = ProjectileID.WaterStream;
         }
+
+        public override bool Shoot(Player player) => true;
     }
 
     public class BlueSlimeSoulDrop : GlobalNPC {

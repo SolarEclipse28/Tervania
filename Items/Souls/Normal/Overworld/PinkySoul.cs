@@ -15,6 +15,8 @@ namespace Tervania.Items.Souls.Normal.Overworld {
             item.shootSpeed = 4.0f;
             item.shoot = ProjectileID.BouncyGrenade;
         }
+
+        public override bool Shoot(Player player) => true;
     }
 
     public class PinkySoulDrop : GlobalNPC {

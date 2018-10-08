@@ -5,7 +5,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
     public class DemonEyeSoul : EnchantedSoul {
         public DemonEyeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Demon Eye's Soul", "Extra Jump") { }
 
-        public override void UpdateAccessory(Player player, bool hideVisual) {
+        public override void Update(Player player) {
             player.doubleJumpCloud = true;
         }
     }

@@ -6,7 +6,7 @@ namespace Tervania.Items.Souls.Normal.Desert {
     public class AntlionChargerSoul : EnchantedSoul {
         public AntlionChargerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Antlion Charger's Soul", "Allows Sprinting") { }
 
-        public override void UpdateAccessory(Player player, bool hideVisual) {
+        public override void Update(Player player) {
             player.accRunSpeed += 1;
         }
     }

@@ -5,7 +5,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
     public class YellowSlimeSoul : EnchantedSoul {
         public YellowSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Yellow Slime's Soul", "+1 Defense") { }
 
-        public override void UpdateAccessory(Player player, bool hideVisual) {
+        public override void Update(Player player) {
             player.statDefense += 1;
         }
     }

@@ -22,6 +22,8 @@ namespace Tervania.Items.Souls.Normal.Ice {
             Main.projectile[proj].hostile = false;
             return proj;
         }
+
+        public override bool Shoot(Player player) => true;
     }
 
     public class SpikedIceSlimeSoulDrop : GlobalNPC {

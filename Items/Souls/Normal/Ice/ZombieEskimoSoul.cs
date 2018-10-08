@@ -6,7 +6,7 @@ namespace Tervania.Items.Souls.Normal.Ice {
     public class ZombieEskimoSoul : EnchantedSoul {
         public ZombieEskimoSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Zombie Eskimo's Soul", "Prevents Chilled") { }
 
-        public override void UpdateAccessory(Player player, bool hideVisual) {
+        public override void Update(Player player) {
             player.buffImmune[BuffID.Chilled] = true;
         }
     }

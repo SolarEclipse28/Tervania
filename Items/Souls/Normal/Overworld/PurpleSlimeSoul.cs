@@ -5,7 +5,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
     public class PurpleSlimeSoul : EnchantedSoul {
         public PurpleSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Purple Slime's Soul", "Safer Falls") { }
 
-        public override void UpdateAccessory(Player player, bool hideVisual) {
+        public override void Update(Player player) {
             player.extraFall = 3;
         }
     }

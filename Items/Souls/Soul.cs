@@ -35,6 +35,8 @@ namespace Tervania.Items.Souls {
             item.rare = IRare;
             item.consumable = false;
         }
+
+        public override void UpdateAccessory(Player player, bool hideVisual) => Update(player);
         public override void GrabRange(Player player, ref int grabRange) => grabRange *= 2;
 
         public override bool GrabStyle(Player player) {
@@ -57,5 +59,8 @@ namespace Tervania.Items.Souls {
         }
 
         public override void ModifyTooltips(List<TooltipLine> tooltips) => tooltips.Insert(1, GetTooltip());
+
+        public abstract void Update(Player player);
+        public abstract void Use(Player player);
     }
 }

@@ -5,7 +5,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
     public class GreenSlimeSoul : EnchantedSoul {
         public GreenSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Green Slime's Soul", "Increased jump height and move speed") { }
 
-        public override void UpdateAccessory(Player player, bool hideVisual) {
+        public override void Update(Player player) {
             player.moveSpeed *= 1.1f;
             player.jumpSpeedBoost += 2;
         }

@@ -14,10 +14,10 @@ namespace Tervania.Items.Souls.Normal.Overworld {
             item.mana = IMana;
         }
 
-        public override void Use(Player player, bool shoot = false) {
-            base.Use(player, false);
+        public override bool Shoot(Player player) {
             player.Hurt(PlayerDeathReason.ByCustomReason(player.name + " ate themselves"), item.damage, 0);
             player.AddBuff(BuffID.WellFed, 3000);
+            return false;
         }
     }
 

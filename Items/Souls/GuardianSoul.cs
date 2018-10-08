@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls {
-    public class GuardianSoul : Soul {
+    public abstract class GuardianSoul : Soul {
         public int IShoot { get; internal set; }
         public int IMana { get; internal set; }
         public int IUseTime { get; internal set; }
@@ -20,8 +20,16 @@ namespace Tervania.Items.Souls {
             item.mana = IMana;
         }
 
-        public override void UpdateAccessory(Player player, bool hideVisual) {
-            if (Tervania.GuardianSoulHotKey.Current) Use(player);
+        public override void Update(Player player) {
+            if (Tervania.GuardianSoulHotKey.Current && player.statMana > item.mana) {
+                if (item.useTime == IUseTime / IMana) {
+                    player.statMana -= item.mana;
+                    item.mana += IMana;
+                }
+                player.manaRegenCount = 0;
+                Use(player);
+            }
+            
             if (item.mana == IMana) return;
             item.useTime--;
             if (item.useTime <= 0) {
@@ -33,16 +41,6 @@ namespace Tervania.Items.Souls {
         }
 
         public override void RightClick(Player player) => player.GetModPlayer<TervaniaPlayer>().SetGSoul(item, true);
-
-        public virtual bool Use(Player player) {
-            if (player.statMana < item.mana) return false;
-            if (item.useTime == IUseTime / IMana) {
-                player.statMana -= item.mana;
-                item.mana += IMana;
-            }
-            player.manaRegenCount = 0;
-            return true;
-        }
 
         public override TooltipLine GetTooltip() {
             if (line != null) return line;

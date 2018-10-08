@@ -10,6 +10,8 @@ namespace Tervania.Items.Souls {
 
         public override void RightClick(Player player) => player.GetModPlayer<TervaniaPlayer>().SetESoul(item, true);
 
+        public override void Use(Player player) {}
+
         public override TooltipLine GetTooltip() {
             if (line != null) return line;
             line = new TooltipLine(mod, "SoulType", "Enchanted Soul");
