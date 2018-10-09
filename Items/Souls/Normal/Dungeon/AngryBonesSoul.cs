@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Dungeon {
 
     public class AngryBonesSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Angry Bones") Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Dungeon.AngryBonesSoul>());
+            if (npc.TypeName == "Angry Bones") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Dungeon.AngryBonesSoul>());
         }
     }
 }

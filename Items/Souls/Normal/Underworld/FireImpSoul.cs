@@ -28,7 +28,7 @@ namespace Tervania.Items.Souls.Normal.Underworld {
 
     public class FireImpSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Fire Imp") Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Underworld.FireImpSoul>());
+            if (npc.TypeName == "Fire Imp") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Underworld.FireImpSoul>());
         }
     }
 }

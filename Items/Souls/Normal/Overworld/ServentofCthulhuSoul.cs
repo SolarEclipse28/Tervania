@@ -13,7 +13,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
     public class ServentofCthulhuSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Servent of Cthulhu") Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Overworld.ServentofCthulhuSoul>());
+            if (npc.TypeName == "Servent of Cthulhu") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Overworld.ServentofCthulhuSoul>());
         }
     }
 }

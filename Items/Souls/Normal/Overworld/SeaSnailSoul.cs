@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
     public class SeaSnailSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Sea Snail") Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Overworld.SeaSnailSoul>());
+            if (npc.TypeName == "Sea Snail") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Overworld.SeaSnailSoul>());
         }
     }
 }

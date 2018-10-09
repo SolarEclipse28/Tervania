@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
     public class GoblinScoutSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Goblin Scout") Tervania.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Overworld.GoblinScoutSoul>());
+            if (npc.TypeName == "Goblin Scout") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Overworld.GoblinScoutSoul>());
         }
     }
 }

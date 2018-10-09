@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Hardmode.Underground {
 
     public class BlackRecluseSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Black Recluse") Tervania.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Hardmode.Underground.BlackRecluseSoul>());
+            if (npc.TypeName == "Black Recluse") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Hardmode.Underground.BlackRecluseSoul>());
         }
     }
 }

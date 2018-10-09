@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Jungle {
 
     public class JungleBatSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Jungle Bat") Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Jungle.JungleBatSoul>());
+            if (npc.TypeName == "Jungle Bat") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Jungle.JungleBatSoul>());
         }
     }
 }

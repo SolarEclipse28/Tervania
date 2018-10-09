@@ -25,7 +25,7 @@ namespace Tervania.Items.Souls.Normal.Desert {
 
     public class AngryTumblerSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.Tumbleweed) Tervania.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Desert.AngryTumblerSoul>());
+            if (npc.type == NPCID.Tumbleweed) TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Desert.AngryTumblerSoul>());
         }
     }
 }

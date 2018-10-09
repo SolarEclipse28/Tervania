@@ -28,7 +28,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class SalamanderSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Salamander") Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Underground.SalamanderSoul>());
+            if (npc.TypeName == "Salamander") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Underground.SalamanderSoul>());
         }
     }
 }
