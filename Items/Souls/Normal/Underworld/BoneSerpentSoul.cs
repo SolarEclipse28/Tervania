@@ -13,7 +13,7 @@ namespace Tervania.Items.Souls.Normal.Underworld {
 
     public class GreenSlimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Bone Serpent") Tervania.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Underworld.BoneSerpentSoul>());
+            if (npc.TypeName == "Bone Serpent") TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Underworld.BoneSerpentSoul>());
         }
     }
 }

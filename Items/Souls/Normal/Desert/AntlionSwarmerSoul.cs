@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Desert {
 
     public class AntlionSwarmerSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Antlion Swarmer") Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Desert.AntlionSwarmerSoul>());
+            if (npc.TypeName == "Antlion Swarmer") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Desert.AntlionSwarmerSoul>());
         }
     }
 }

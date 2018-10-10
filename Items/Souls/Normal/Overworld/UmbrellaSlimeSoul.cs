@@ -15,7 +15,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
     public class UmbrellaSlimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Umbrella Slime") Tervania.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Overworld.UmbrellaSlimeSoul>());
+            if (npc.TypeName == "Umbrella Slime") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Overworld.UmbrellaSlimeSoul>());
         }
     }
 }

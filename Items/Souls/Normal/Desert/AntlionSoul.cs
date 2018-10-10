@@ -20,7 +20,7 @@ namespace Tervania.Items.Souls.Normal.Desert {
 
     public class AntlionSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Blue Slime") Tervania.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Desert.AntlionSoul>());
+            if (npc.TypeName == "Blue Slime") TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Desert.AntlionSoul>());
         }
     }
 }

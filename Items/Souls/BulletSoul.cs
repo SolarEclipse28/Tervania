@@ -30,14 +30,14 @@ namespace Tervania.Items.Souls {
             if (item.mana == 0) return;
             item.useTime--;
             if (item.useTime <= 0) {
-                if (item.mana == 1) Tervania.RechargeEffect(player);
+                if (item.mana == 1) TervaniaUtils.RechargeEffect(player);
                 item.mana--;
                 item.useTime = IUseTime / IMana;
             }
         }
         public override void RightClick(Player player) => player.GetModPlayer<TervaniaPlayer>().SetBSoul(item, true);
 
-        public virtual int CreateProjectile(Player player, ref Vector2 dir) => Projectile.NewProjectile(player.Center, Tervania.AdjustMagnitude(ref dir, item.shootSpeed, item.shootSpeed), item.shoot, item.damage, item.knockBack, player.whoAmI);
+        public virtual int CreateProjectile(Player player, ref Vector2 dir) => Projectile.NewProjectile(player.Center, TervaniaUtils.AdjustMagnitude(ref dir, item.shootSpeed, item.shootSpeed), item.shoot, item.damage, item.knockBack, player.whoAmI);
 
         public override void Use(Player player) => Use(player, new Vector2(Main.mouseX - Main.screenWidth / 2, Main.mouseY - Main.screenHeight / 2));
 

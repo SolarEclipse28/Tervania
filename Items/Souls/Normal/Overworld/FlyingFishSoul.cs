@@ -16,7 +16,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
     public class FlyingFishSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Flying Fish") Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Overworld.FlyingFishSoul>());
+            if (npc.TypeName == "Flying Fish") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Overworld.FlyingFishSoul>());
         }
     }
 }

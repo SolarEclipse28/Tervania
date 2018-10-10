@@ -28,7 +28,7 @@ namespace Tervania.Items.Souls.Normal.Ice {
 
     public class SpikedIceSlimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.SpikedIceSlime) Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Ice.SpikedIceSlimeSoul>());
+            if (npc.type == NPCID.SpikedIceSlime) TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Ice.SpikedIceSlimeSoul>());
         }
     }
 }

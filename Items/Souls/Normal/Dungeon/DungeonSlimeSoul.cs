@@ -13,7 +13,7 @@ namespace Tervania.Items.Souls.Normal.Dungeon {
 
     public class DungeonSlimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Dungeon Slime") Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Dungeon.DungeonSlimeSoul>());
+            if (npc.TypeName == "Dungeon Slime") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Dungeon.DungeonSlimeSoul>());
         }
     }
 }

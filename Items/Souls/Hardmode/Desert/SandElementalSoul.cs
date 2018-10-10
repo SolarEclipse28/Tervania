@@ -27,7 +27,7 @@ namespace Tervania.Items.Souls.Hardmode.Desert {
 
     public class SandElementalSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Sand Elemental") Tervania.DropItem(npc, 1f, mod.ItemType<Items.Souls.Hardmode.Desert.SandElementalSoul>());
+            if (npc.TypeName == "Sand Elemental") TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Hardmode.Desert.SandElementalSoul>());
         }
     }
 }

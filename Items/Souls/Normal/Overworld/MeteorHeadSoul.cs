@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
     public class MeteorHeadSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Meteor Head") Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Overworld.MeteorHeadSoul>());
+            if (npc.TypeName == "Meteor Head") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Overworld.MeteorHeadSoul>());
         }
     }
 }

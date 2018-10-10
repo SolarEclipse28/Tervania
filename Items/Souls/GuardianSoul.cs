@@ -34,7 +34,7 @@ namespace Tervania.Items.Souls {
             item.useTime--;
             if (item.useTime <= 0) {
                 item.mana--;
-                if (item.mana == 0) Tervania.RechargeEffect(player);
+                if (item.mana == 0) TervaniaUtils.RechargeEffect(player);
                 item.useTime = IUseTime / IMana;
             }
 
