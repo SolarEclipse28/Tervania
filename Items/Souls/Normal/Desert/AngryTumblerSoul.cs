@@ -4,21 +4,21 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Desert {
     public class AngryTumblerSoul : EnchantedSoul {
-        public AngryTumblerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Angry Tumbler's Soul", "Damage increases based on movement") { }
+        public AngryTumblerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Angry Tumbler's Soul", "Damage increases based on movement. Up to 20% at 40mph.") { }
 
         public override void Update(Player player) {
             float spd = player.velocity.X;
-            if (spd <0){
+            if (player.velocity.X <0){
                 spd = spd * -1;
             }
-            if (spd >25){
-                spd = 25;
+            if (spd >8){
+                spd = 8;
             }
-            player.meleeDamage *= 1.00f +(0.01f * (spd));
-            player.magicDamage *= 1.00f +(0.01f * (spd));
-            player.rangedDamage *= 1.00f +(0.01f * (spd));
-            player.minionDamage *= 1.00f +(0.01f * (spd));
-            player.thrownDamage *= 1.00f +(0.01f * (spd));
+            player.meleeDamage *= 1.00f +(0.025f * (spd));
+            player.magicDamage *= 1.00f +(0.025f * (spd));
+            player.rangedDamage *= 1.00f +(0.025f * (spd));
+            player.minionDamage *= 1.00f +(0.025f * (spd));
+            player.thrownDamage *= 1.00f +(0.025f * (spd));
             player.moveSpeed *= 1.1f;
         }
     }

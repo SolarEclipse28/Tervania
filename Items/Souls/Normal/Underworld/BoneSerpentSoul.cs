@@ -6,7 +6,7 @@ namespace Tervania.Items.Souls.Normal.Underworld {
         public BoneSerpentSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Bone Serpent's Soul", "Slightly Faster Mining and Slight Armor Penetration") { }
 
         public override void Update(Player player) {
-            player.pickSpeed *= 0.9f;
+            player.pickSpeed *= 0.87f;
             player.armorPenetration += 2;
         }
     }

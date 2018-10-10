@@ -1,19 +1,19 @@
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Tervania.Items.Souls.Normal.Underground {
-    public class SkeletonSoul : BulletSoul {
-        public SkeletonSoul() : base(10, 60, 2, Item.buyPrice(0, 0, 10, 0), "Skeleton's Soul", "Throw a bone!") { }
+namespace Tervania.Items.Souls.Normal.Jungle {
+    public class SnatcherSoul : BulletSoul {
+        public SnatcherSoul() : base(10, 600, 2, Item.buyPrice(0, 0, 10, 0), "Snatcher's Soul", "Shoots vines!") { }
 
         public override void SetDefaults() {
             base.SetDefaults();
-            item.damage = 20;
+            item.damage = 0;
             item.useTime = IUseTime / IMana;
             item.mana = IMana;
-            item.knockBack = 1f;
-            item.shootSpeed = 6.0f;
-            item.shoot = ProjectileID.SkeletonBone;
+            item.knockBack = 0f;
+            item.shootSpeed = 8.0f;
+            item.shoot = ProjectileID.VineRopeCoil;
         }
 
         public override int CreateProjectile(Player player, ref Microsoft.Xna.Framework.Vector2 dir) {
@@ -22,12 +22,13 @@ namespace Tervania.Items.Souls.Normal.Underground {
             Main.projectile[proj].hostile = false;
             return proj;
         }
+
         public override bool Shoot(Player player) => true;
     }
 
-    public class SkeletonSoulDrop : GlobalNPC {
+    public class SnatcherSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.Skeleton) Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Underground.SkeletonSoul>());
+            if (npc.TypeName == "Snatcher") Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Jungle.SnatcherSoul>());
         }
     }
 }
