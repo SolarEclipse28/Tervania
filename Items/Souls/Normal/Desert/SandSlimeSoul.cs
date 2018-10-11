@@ -16,7 +16,7 @@ namespace Tervania.Items.Souls.Normal.Desert {
 
     public class SandSlimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.SandSlime) Tervania.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Desert.SandSlimeSoul>());
+            if (npc.type == NPCID.SandSlime) TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Desert.SandSlimeSoul>());
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Underworld {
 
     public class DemonSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Demon") Tervania.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Underworld.DemonSoul>());
+            if (npc.TypeName == "Demon") TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Underworld.DemonSoul>());
         }
     }
 }

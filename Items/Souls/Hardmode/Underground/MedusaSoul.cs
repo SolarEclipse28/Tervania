@@ -15,7 +15,7 @@ namespace Tervania.Items.Souls.Hardmode.Underground {
 
     public class IceTortoiseSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.Medusa) Tervania.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Hardmode.Underground.MedusaSoul>());
+            if (npc.type == NPCID.Medusa) TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Hardmode.Underground.MedusaSoul>());
         }
     }
 }

@@ -28,7 +28,7 @@ namespace Tervania.Items.Souls.Normal.Jungle {
 
     public class ManEaterSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.ManEater) Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Jungle.ManEaterSoul>());
+            if (npc.type == NPCID.ManEater) TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Jungle.ManEaterSoul>());
         }
     }
 }

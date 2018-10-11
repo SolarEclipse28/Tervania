@@ -28,7 +28,7 @@ namespace Tervania.Items.Souls.Normal.Jungle {
 
     public class SpikedJungleSlimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.SpikedJungleSlime) Tervania.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Jungle.SpikedJungleSlimeSoul>());
+            if (npc.type == NPCID.SpikedJungleSlime) TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Jungle.SpikedJungleSlimeSoul>());
         }
     }
 }

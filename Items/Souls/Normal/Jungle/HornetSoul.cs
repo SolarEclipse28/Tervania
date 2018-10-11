@@ -18,7 +18,7 @@ namespace Tervania.Items.Souls.Normal.Jungle {
 
     public class HornetSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Hornet") Tervania.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Jungle.HornetSoul>());
+            if (npc.TypeName == "Hornet") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Jungle.HornetSoul>());
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Tervania.Items.Souls.Normal.Underworld {
 
     public class LeechSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Leech") Tervania.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Underworld.LeechSoul>());
+            if (npc.TypeName == "Leech") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Underworld.LeechSoul>());
         }
     }
 }

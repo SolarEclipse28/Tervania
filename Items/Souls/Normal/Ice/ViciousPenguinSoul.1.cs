@@ -13,7 +13,7 @@ namespace Tervania.Items.Souls.Normal.Ice {
 
     public class ViciousPenguinSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.CrimsonPenguin) Tervania.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Ice.ViciousPenguinSoul>());
+            if (npc.type == NPCID.CrimsonPenguin) TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Ice.ViciousPenguinSoul>());
         }
     }
 }
