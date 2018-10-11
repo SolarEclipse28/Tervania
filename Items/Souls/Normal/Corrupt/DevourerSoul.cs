@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Tervania.Items.Souls.Normal.Crimson {
+namespace Tervania.Items.Souls.Normal.Corrupt {
     public class DevourerSoul : GuardianSoul {
         public DevourerSoul() : base(5, 80, 3, Item.buyPrice(0, 0, 25, 0), "Devourer's Soul", "30% increased melee damage") { }
 
@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Normal.Crimson {
 
     public class DevourerSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Devourer") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Crimson.DevourerSoul>());
+            if (npc.TypeName == "Devourer") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Corrupt.DevourerSoul>());
         }
     }
 }
