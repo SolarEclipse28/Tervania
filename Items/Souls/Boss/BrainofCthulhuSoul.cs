@@ -1,0 +1,21 @@
+using Terraria;
+using Terraria.DataStructures;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace Tervania.Items.Souls.Boss {
+    public class BrainofCthulhuSoul : EnchantedSoul {
+        public BrainofCthulhuSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Brain of Cthulhu's Soul", "Regenerate mana and -10% mana cost") { }
+
+        public override void Update(Player player) {
+            player.manaCost *= 0.9f;
+            player.manaRegen += 2;
+        }
+    }
+
+    public class BrainofCthulhuSoulDrop : GlobalNPC {
+        public override void NPCLoot(NPC npc) {
+            if (npc.TypeName == "Brain of Cthulhu") TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.BrainofCthulhuSoul>());
+        }
+    }
+}
