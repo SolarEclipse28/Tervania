@@ -28,7 +28,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
     public class HarpySoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.Harpy) TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Overworld.HarpySoul>());
+            if (npc.type == NPCID.Harpy) TervaniaUtils.DropItem(npc, 3f, mod.ItemType<Items.Souls.Normal.Overworld.HarpySoul>());
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class MushroomZombieSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Spore Zombie") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Underground.MushroomZombieSoul>());
+            if (npc.TypeName == "Spore Zombie") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Underground.MushroomZombieSoul>());
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class AnomuraFungusSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Anomura Fungus") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Underground.AnomuraFungusSoul>());
+            if (npc.TypeName == "Anomura Fungus") TervaniaUtils.DropItem(npc, 3f, mod.ItemType<Items.Souls.Normal.Underground.AnomuraFungusSoul>());
         }
     }
 }

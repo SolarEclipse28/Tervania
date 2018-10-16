@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class MushiLadybugSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Mushi Ladybug") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Underground.MushiLadybugSoul>());
+            if (npc.TypeName == "Mushi Ladybug") TervaniaUtils.DropItem(npc, 3f, mod.ItemType<Items.Souls.Normal.Underground.MushiLadybugSoul>());
         }
     }
 }

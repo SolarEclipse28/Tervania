@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class TimSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Tim") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Underground.TimSoul>());
+            if (npc.TypeName == "Tim") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Underground.TimSoul>());
         }
     }
 }

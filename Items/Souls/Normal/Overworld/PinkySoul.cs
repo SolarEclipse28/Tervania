@@ -21,7 +21,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
     public class PinkySoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.Pinky) TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Overworld.PinkySoul>());
+            if (npc.type == NPCID.Pinky) TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Normal.Overworld.PinkySoul>());
         }
     }
 }

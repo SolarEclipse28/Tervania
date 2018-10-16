@@ -16,7 +16,7 @@ namespace Tervania.Items.Souls.Normal.Ice {
 
     public class UndeadVikingSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.UndeadViking) TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Ice.UndeadVikingSoul>());
+            if (npc.type == NPCID.UndeadViking) TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Ice.UndeadVikingSoul>());
         }
     }
 }

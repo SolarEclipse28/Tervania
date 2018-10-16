@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class YellowSlimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Yellow Slime") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Underground.YellowSlimeSoul>());
+            if (npc.TypeName == "Yellow Slime") TervaniaUtils.DropItem(npc, 4f, mod.ItemType<Items.Souls.Normal.Underground.YellowSlimeSoul>());
         }
     }
 }

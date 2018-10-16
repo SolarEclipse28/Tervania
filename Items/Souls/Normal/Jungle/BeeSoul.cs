@@ -15,7 +15,7 @@ namespace Tervania.Items.Souls.Normal.Jungle {
 
     public class BeeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Bee") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Jungle.BeeSoul>());
+            if (npc.TypeName == "Bee") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Jungle.BeeSoul>());
         }
     }
 }

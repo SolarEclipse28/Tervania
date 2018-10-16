@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Dungeon {
 
     public class DarkCasterSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Dark Caster") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Dungeon.DarkCasterSoul>());
+            if (npc.TypeName == "Dark Caster") TervaniaUtils.DropItem(npc, 4f, mod.ItemType<Items.Souls.Normal.Dungeon.DarkCasterSoul>());
         }
     }
 }

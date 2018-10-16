@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Dungeon {
 
     public class CursedSkullSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Cursed Skull") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Dungeon.CursedSkullSoul>());
+            if (npc.TypeName == "Cursed Skull") TervaniaUtils.DropItem(npc, 4f, mod.ItemType<Items.Souls.Normal.Dungeon.CursedSkullSoul>());
         }
     }
 }

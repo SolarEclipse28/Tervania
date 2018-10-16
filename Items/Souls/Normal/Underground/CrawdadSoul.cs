@@ -18,7 +18,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class CrawdadSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Crawdad") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Underground.CrawdadSoul>());
+            if (npc.TypeName == "Crawdad") TervaniaUtils.DropItem(npc, 4f, mod.ItemType<Items.Souls.Normal.Underground.CrawdadSoul>());
         }
     }
 }

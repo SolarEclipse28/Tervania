@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
     public class CrabSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Crab") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Overworld.CrabSoul>());
+            if (npc.TypeName == "Crab") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Overworld.CrabSoul>());
         }
     }
 }

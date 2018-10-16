@@ -1,1 +1,16 @@
-Tervania is a pretty cool mod, it does...this. Modify this file with a description of your mod.
+Tervania is a pretty cool mod, it adds souls for every enemy as a special drop. Only hostile NPCs will drop souls.
+There are 3 different types of souls that can be dropped and equipped for special effects.
+
+-Enchanted Soul-
+A passive effect that works just like accessories.
+
+-Bullet Soul-
+A one-shot ability that is free to use for the 1st time, but continues to increase in mana cost as used unless you give it time to cooldown.
+
+-Guardian Soul-
+A channeled ability that increases in mana cost as you continually use it.
+
+Set the hotkey to the default F in your control settings under mod controls "Tervania Guardian Soul", otherwise you won't be able to use the
+Bullet or Guardian soul.
+
+Have fun!!!

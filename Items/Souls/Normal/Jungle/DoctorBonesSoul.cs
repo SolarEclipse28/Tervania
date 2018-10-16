@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Normal.Jungle {
 
     public class DoctorBonesSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Doctor Bones") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Jungle.DoctorBonesSoul>());
+            if (npc.TypeName == "Doctor Bones") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Jungle.DoctorBonesSoul>());
         }
     }
 }

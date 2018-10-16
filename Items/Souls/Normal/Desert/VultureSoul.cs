@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Normal.Desert {
 
     public class VultureSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.Vulture) TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Desert.VultureSoul>());
+            if (npc.type == NPCID.Vulture) TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Desert.VultureSoul>());
         }
     }
 }

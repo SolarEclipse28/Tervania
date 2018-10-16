@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class WallCreeperSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Wall Creeper") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Underground.WallCreeperSoul>());
+            if (npc.TypeName == "Wall Creeper") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Underground.WallCreeperSoul>());
         }
     }
 }

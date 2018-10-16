@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Normal.Crimson {
 
     public class FaceMonsterSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Face Monster") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Crimson.FaceMonsterSoul>());
+            if (npc.TypeName == "Face Monster") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Crimson.FaceMonsterSoul>());
         }
     }
 }

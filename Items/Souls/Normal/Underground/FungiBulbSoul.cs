@@ -28,7 +28,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class FungiBulbSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Fungi Bulb") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Underground.FungiBulbSoul>());
+            if (npc.TypeName == "Fungi Bulb") TervaniaUtils.DropItem(npc, 4f, mod.ItemType<Items.Souls.Normal.Underground.FungiBulbSoul>());
         }
     }
 }
