@@ -15,7 +15,7 @@ namespace Tervania.Items.Souls.DrakSolz.Overworld {
 
     public class LittleMushroomSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Little Mushroom") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.DrakSolz.Overworld.LittleMushroomSoul>());
+            if (npc.TypeName == "Little Mushroom") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.DrakSolz.Overworld.LittleMushroomSoul>());
         }
     }
 }

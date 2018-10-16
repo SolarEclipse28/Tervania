@@ -3,11 +3,10 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class ServantofCthulhuSoul : EnchantedSoul {
-        public ServantofCthulhuSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Servant of Cthulhu's Soul", "10 Extra Life and Mana") { }
+        public ServantofCthulhuSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Servant of Cthulhu's Soul", "Increases view range while holding right click") { }
 
-        public override void Update(Player player) {
-            player.statLifeMax2 += 10;
-            player.statManaMax2 += 10;
+        public override void Update(Player player) {    
+            player.scope = true;
         }
     }
 

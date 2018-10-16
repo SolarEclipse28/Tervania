@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.DrakSolz.Overworld {
 
     public class CrystalLizardSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Crystal Lizard") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.DrakSolz.Overworld.CrystalLizardSoul>());
+            if (npc.TypeName == "Crystal Lizard") TervaniaUtils.DropItem(npc, 8f, mod.ItemType<Items.Souls.DrakSolz.Overworld.CrystalLizardSoul>());
         }
     }
 }
