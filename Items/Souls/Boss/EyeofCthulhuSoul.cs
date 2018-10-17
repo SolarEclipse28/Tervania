@@ -1,17 +1,22 @@
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.DataStructures;
+
 
 namespace Tervania.Items.Souls.Boss {
     public class EyeofCthulhuSoul : EnchantedSoul {
         public EyeofCthulhuSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Eye of Cthulhu' Soul", "Regenerate at low life") { }
+        public override void SetStaticDefaults() {
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 4));
+            ItemID.Sets.AnimatesAsSoul[item.type] = true;
+        }
 
         public override void Update(Player player) {
-            if (player.statLife <= (player.statLifeMax2 / 2)){
-            player.lifeRegen += 3;
-            player.manaRegenDelay -= 5;
-            player.manaRegen += 3;
+            if (player.statLife <= (player.statLifeMax2 / 2)) {
+                player.lifeRegen += 3;
+                player.manaRegenDelay -= 5;
+                player.manaRegen += 3;
             }
         }
     }

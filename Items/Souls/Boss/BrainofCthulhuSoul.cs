@@ -6,6 +6,10 @@ using Terraria.ModLoader;
 namespace Tervania.Items.Souls.Boss {
     public class BrainofCthulhuSoul : EnchantedSoul {
         public BrainofCthulhuSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Brain of Cthulhu's Soul", "Regenerate mana and -10% mana cost") { }
+        public override void SetStaticDefaults() {
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 4));
+            ItemID.Sets.AnimatesAsSoul[item.type] = true;
+        }
 
         public override void Update(Player player) {
             player.manaCost *= 0.9f;

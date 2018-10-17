@@ -1,10 +1,15 @@
 ﻿using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class WallofFleshSoul : BulletSoul {
         public WallofFleshSoul() : base(20, 1000, 2, Item.buyPrice(0, 0, 10, 0), "Wall of Flesh's Soul", "Shoots out a gross tendon!") { }
+        public override void SetStaticDefaults() {
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 4));
+            ItemID.Sets.AnimatesAsSoul[item.type] = true;
+        }
 
         public override void SetDefaults() {
             base.SetDefaults();
