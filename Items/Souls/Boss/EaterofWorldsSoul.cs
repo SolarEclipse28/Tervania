@@ -13,12 +13,20 @@ namespace Tervania.Items.Souls.Boss {
 
         public override void SetDefaults() {
             base.SetDefaults();
-            item.damage = 25;
+            item.damage = 8;
             item.useTime = IUseTime / IMana;
             item.mana = IMana;
             item.knockBack = 1.5f;
             item.shootSpeed = 6.0f;
             item.shoot = ProjectileID.TinyEater;
+        }
+
+        public override int CreateProjectile(Player player, ref Microsoft.Xna.Framework.Vector2 dir) {
+            int proj = base.CreateProjectile(player, ref dir);
+            Main.projectile[proj].friendly = true;
+            Main.projectile[proj].hostile = false;
+            Main.projectile[proj].penetrate = 4;
+            return proj;
         }
         public override bool Shoot(Player player) => true;
     }

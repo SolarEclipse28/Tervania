@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class WallofFleshSoul : BulletSoul {
-        public WallofFleshSoul() : base(20, 1000, 2, Item.buyPrice(0, 0, 10, 0), "Wall of Flesh's Soul", "Shoots out a gross tendon!") { }
+        public WallofFleshSoul() : base(20, 600, 2, Item.buyPrice(0, 0, 10, 0), "Wall of Flesh's Soul", "Shoots out a gross tendon!") { }
         public override void SetStaticDefaults() {
             Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 4));
             ItemID.Sets.AnimatesAsSoul[item.type] = true;
@@ -33,7 +33,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class WallofFleshSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Wall of Flesh") TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.WallofFleshSoul>());
+            if (npc.type == NPCID.WallofFlesh) TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.WallofFleshSoul>());
         }
     }
 }

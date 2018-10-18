@@ -20,6 +20,7 @@ namespace Tervania {
         public Item bulletSoul;
         public int UseBulletSoul { get; internal set; }
         public Item guardianSoul;
+        public bool FlowerWalk { get; set; }
 
         public override void Initialize() {
             enchantedSoul = new Item();
@@ -29,9 +30,13 @@ namespace Tervania {
             guardianSoul = new Item();
             guardianSoul.SetDefaults();
             UseBulletSoul = 0;
+
+            FlowerWalk = false;
         }
 
-        public override void ResetEffects() { }
+        public override void ResetEffects() {
+            FlowerWalk = false;
+        }
 
         public override void ProcessTriggers(TriggersSet triggersSet) {
             if (!player.controlUseItem) UseBulletSoul = 0;
@@ -62,6 +67,8 @@ namespace Tervania {
             player.VanillaUpdateAccessory(player.whoAmI, enchantedSoul, true, ref wallSpeedBuff, ref tileSpeedBuff, ref tileRangeBuff);
             player.VanillaUpdateAccessory(player.whoAmI, bulletSoul, true, ref wallSpeedBuff, ref tileSpeedBuff, ref tileRangeBuff);
             player.VanillaUpdateAccessory(player.whoAmI, guardianSoul, true, ref wallSpeedBuff, ref tileSpeedBuff, ref tileRangeBuff);
+            
+            if (FlowerWalk && player.whoAmI == Main.myPlayer && (player.velocity.Y == 0.0 && player.grappling[0] == -1)) FlowerWalkDo();
         }
 
         public override void PostUpdateEquips() { }
@@ -134,5 +141,68 @@ namespace Tervania {
 
             return packet;
         }
+
+        private void FlowerWalkDo() {
+            int index2 = (int) player.Center.X / 16;
+            int tileY = (int) (player.position.Y + (double) player.height - 1.0) / 16;
+            if (Main.tile[index2, tileY] == null)
+              Main.tile[index2, tileY] = new Tile();
+            if (!Main.tile[index2, tileY].active() && (int) Main.tile[index2, tileY].liquid == 0 && (Main.tile[index2, tileY + 1] != null && WorldGen.SolidTile(index2, tileY + 1)))
+            {
+              Main.tile[index2, tileY].frameY = (short) 0;
+              Main.tile[index2, tileY].slope((byte) 0);
+              Main.tile[index2, tileY].halfBrick(false);
+              if ((int) Main.tile[index2, tileY + 1].type == 2)
+              {
+                if (Main.rand.Next(2) == 0)
+                {
+                  Main.tile[index2, tileY].active(true);
+                  Main.tile[index2, tileY].type = (ushort) 3;
+                  Main.tile[index2, tileY].frameX = (short) (18 * Main.rand.Next(6, 11));
+                  while ((int) Main.tile[index2, tileY].frameX == 144)
+                    Main.tile[index2, tileY].frameX = (short) (18 * Main.rand.Next(6, 11));
+                }
+                else
+                {
+                  Main.tile[index2, tileY].active(true);
+                  Main.tile[index2, tileY].type = (ushort) 73;
+                  Main.tile[index2, tileY].frameX = (short) (18 * Main.rand.Next(6, 21));
+                  while ((int) Main.tile[index2, tileY].frameX == 144)
+                    Main.tile[index2, tileY].frameX = (short) (18 * Main.rand.Next(6, 21));
+                }
+                if (Main.netMode == 1)
+                  NetMessage.SendTileSquare(-1, index2, tileY, 1, TileChangeType.None);
+              }
+              else if ((int) Main.tile[index2, tileY + 1].type == 109)
+              {
+                if (Main.rand.Next(2) == 0)
+                {
+                  Main.tile[index2, tileY].active(true);
+                  Main.tile[index2, tileY].type = (ushort) 110;
+                  Main.tile[index2, tileY].frameX = (short) (18 * Main.rand.Next(4, 7));
+                  while ((int) Main.tile[index2, tileY].frameX == 90)
+                    Main.tile[index2, tileY].frameX = (short) (18 * Main.rand.Next(4, 7));
+                }
+                else
+                {
+                  Main.tile[index2, tileY].active(true);
+                  Main.tile[index2, tileY].type = (ushort) 113;
+                  Main.tile[index2, tileY].frameX = (short) (18 * Main.rand.Next(2, 8));
+                  while ((int) Main.tile[index2, tileY].frameX == 90)
+                    Main.tile[index2, tileY].frameX = (short) (18 * Main.rand.Next(2, 8));
+                }
+                if (Main.netMode == 1)
+                  NetMessage.SendTileSquare(-1, index2, tileY, 1, TileChangeType.None);
+              }
+              else if ((int) Main.tile[index2, tileY + 1].type == 60)
+              {
+                Main.tile[index2, tileY].active(true);
+                Main.tile[index2, tileY].type = (ushort) 74;
+                Main.tile[index2, tileY].frameX = (short) (18 * Main.rand.Next(9, 17));
+                if (Main.netMode == 1)
+                  NetMessage.SendTileSquare(-1, index2, tileY, 1, TileChangeType.None);
+              }
+            }
+          }
     }
 }
