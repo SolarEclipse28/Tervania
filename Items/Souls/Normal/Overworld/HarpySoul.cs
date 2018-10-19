@@ -20,6 +20,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
             int proj = base.CreateProjectile(player, ref dir);
             Main.projectile[proj].friendly = true;
             Main.projectile[proj].hostile = false;
+            Main.projectile[proj].penetrate = 3;
             return proj;
         }
 

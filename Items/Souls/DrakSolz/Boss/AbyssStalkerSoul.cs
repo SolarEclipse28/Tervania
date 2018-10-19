@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Boss {
     public class AbyssStalkerSoul : EnchantedSoul {
-        public AbyssStalkerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Abyss Stalker's Soul", "The Abyss overtakes you. Consumes you. Embrace it.") { }
+        public AbyssStalkerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Abyss Stalker's Soul", "The Abyss overtakes you. Consumes you.") { }
         public override void SetStaticDefaults() {
             Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 4));
             ItemID.Sets.AnimatesAsSoul[item.type] = true;

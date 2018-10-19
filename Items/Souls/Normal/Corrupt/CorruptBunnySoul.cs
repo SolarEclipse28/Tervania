@@ -3,10 +3,10 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Corrupt {
     public class CorruptBunnySoul : EnchantedSoul {
-        public CorruptBunnySoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Corrupt Bunny's Soul", "+15% bullet damage") { }
+        public CorruptBunnySoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Corrupt Bunny's Soul", "+20% bullet damage") { }
 
         public override void Update(Player player) {
-            player.bulletDamage *= 1.15f;
+            player.bulletDamage *= 1.2f;
         }
     }
 
