@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class EaterofWorldsSoul : BulletSoul {
-        public EaterofWorldsSoul() : base(15, 200, 2, Item.buyPrice(0, 0, 10, 0), "Eater of Worlds' Soul", "Shoots out a tiny eater!") { }
+        public EaterofWorldsSoul() : base(12, 200, 2, Item.buyPrice(0, 0, 10, 0), "Eater of Worlds' Soul", "Shoots out a tiny eater!") { }
         public override void SetStaticDefaults() {
             Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 4));
             ItemID.Sets.AnimatesAsSoul[item.type] = true;
@@ -13,11 +13,11 @@ namespace Tervania.Items.Souls.Boss {
 
         public override void SetDefaults() {
             base.SetDefaults();
-            item.damage = 8;
+            item.damage = 16;
             item.useTime = IUseTime / IMana;
             item.mana = IMana;
             item.knockBack = 1.5f;
-            item.shootSpeed = 6.0f;
+            item.shootSpeed = 5.0f;
             item.shoot = ProjectileID.TinyEater;
         }
 
@@ -25,7 +25,7 @@ namespace Tervania.Items.Souls.Boss {
             int proj = base.CreateProjectile(player, ref dir);
             Main.projectile[proj].friendly = true;
             Main.projectile[proj].hostile = false;
-            Main.projectile[proj].penetrate = 4;
+            Main.projectile[proj].penetrate = 3;
             return proj;
         }
         public override bool Shoot(Player player) => true;

@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
@@ -9,6 +10,7 @@ namespace Tervania.Items.Souls.DrakSolz.Overworld {
             player.armorEffectDrawOutlinesForbidden = true;
             player.findTreasure = true;
             player.discount = true;
+            player.slippy2 = false;
         }
     }
 

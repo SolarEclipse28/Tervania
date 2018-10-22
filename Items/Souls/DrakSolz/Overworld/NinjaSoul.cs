@@ -8,6 +8,9 @@ namespace Tervania.Items.Souls.DrakSolz.Overworld {
 
         public override void Use(Player player) {
             player.invis = true;
+            player.thrownDamage *= 1.1f;
+            player.thrownCrit += 5;
+            player.spikedBoots = 1;
         }
 
     }

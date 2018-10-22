@@ -17,7 +17,6 @@ namespace Tervania.Items.Souls.Normal.Desert {
             player.meleeDamage *= 1.00f +(0.025f * (spd));
             player.magicDamage *= 1.00f +(0.025f * (spd));
             player.rangedDamage *= 1.00f +(0.025f * (spd));
-            player.minionDamage *= 1.00f +(0.025f * (spd));
             player.thrownDamage *= 1.00f +(0.025f * (spd));
             player.moveSpeed *= 1.1f;
         }

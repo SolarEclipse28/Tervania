@@ -4,8 +4,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
-    public class WallofFleshSoul : BulletSoul {
-        public WallofFleshSoul() : base(20, 360, 2, Item.buyPrice(0, 0, 10, 0), "Wall of Flesh's Soul", "Shoots out a gross tendon!") { }
+    public class DukeFishronSoul : BulletSoul {
+        public DukeFishronSoul() : base(15, 120, 2, Item.buyPrice(0, 0, 10, 0), "Duke Fishron's Soul", "Shoots out a gross tendon!") { }
         public override void SetStaticDefaults() {
             Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 4));
             ItemID.Sets.AnimatesAsSoul[item.type] = true;
@@ -13,27 +13,27 @@ namespace Tervania.Items.Souls.Boss {
 
         public override void SetDefaults() {
             base.SetDefaults();
-            item.damage = 50;
+            item.damage = 110;
             item.useTime = IUseTime / IMana;
             item.mana = IMana;
-            item.knockBack = 6.0f;
-            item.shootSpeed = 6.0f;
-            item.shoot = ProjectileID.TendonHook;
+            item.knockBack = 5.0f;
+            item.shootSpeed = 9.0f;
+            item.shoot = ProjectileID.MiniSharkron;
         }
 
         public override int CreateProjectile(Player player, ref Microsoft.Xna.Framework.Vector2 dir) {
             int proj = base.CreateProjectile(player, ref dir);
             Main.projectile[proj].friendly = true;
             Main.projectile[proj].hostile = false;
-            Main.projectile[proj].penetrate = 3;
+            Main.projectile[proj].penetrate = 2;
             return proj;
         }
         public override bool Shoot(Player player) => true;
     }
 
-    public class WallofFleshSoulDrop : GlobalNPC {
+    public class DukeFishronSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.WallofFlesh) TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.WallofFleshSoul>());
+            if (npc.type == NPCID.DukeFishron) TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.DukeFishronSoul>());
         }
     }
 }
