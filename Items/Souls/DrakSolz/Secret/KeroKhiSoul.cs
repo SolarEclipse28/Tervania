@@ -16,7 +16,7 @@ namespace Tervania.Items.Souls.DrakSolz.Secret {
 
     public class KeroKhiSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type >= -65) TervaniaUtils.DropItem(npc, 33.001f, mod.ItemType<Items.Souls.DrakSolz.Secret.KeroKhiSoul>());
+            if (npc.type >= -65) TervaniaUtils.DropItem(npc, 0.001f, mod.ItemType<Items.Souls.DrakSolz.Secret.KeroKhiSoul>());
         }
     }
 }

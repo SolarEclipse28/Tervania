@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Secret {
     public class XahlicemSoul : GuardianSoul {
-        public XahlicemSoul() : base(1, 60, 3, Item.buyPrice(0, 0, 25, 0), "Xahlicem's Soul", "+20 armor and bounce 75% of damage back") { }
+        public XahlicemSoul() : base(1, 60, 3, Item.buyPrice(0, 0, 25, 0), "Xahlicem's Soul", "Become the greatest magic user!") { }
 
         public override void Use(Player player) {
             player.armorEffectDrawShadow = true;
@@ -19,7 +19,7 @@ namespace Tervania.Items.Souls.DrakSolz.Secret {
 
     public class XahlicemSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type >= -65) TervaniaUtils.DropItem(npc, 33.001f, mod.ItemType<Items.Souls.DrakSolz.Secret.XahlicemSoul>());
+            if (npc.type >= -65) TervaniaUtils.DropItem(npc, 0.001f, mod.ItemType<Items.Souls.DrakSolz.Secret.XahlicemSoul>());
         }
     }
 }
