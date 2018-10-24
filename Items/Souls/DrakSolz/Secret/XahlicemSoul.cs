@@ -10,9 +10,11 @@ namespace Tervania.Items.Souls.DrakSolz.Secret {
         public override void Use(Player player) {
             player.armorEffectDrawShadow = true;
             player.armorEffectDrawOutlinesForbidden = true;
-            player.magicCrit = 1000;
-            player.magicDamage *= 2;
-            player.manaCost *= 0.5f;
+            float mc = player.manaCost;
+            Item i = player.inventory[player.selectedItem];
+            if(i.magic == true && player.controlUseItem == true){
+            i.useTime = 4;
+            }
         }
 
     }

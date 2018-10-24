@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class BrainofCthulhuSoul : EnchantedSoul {
-        public BrainofCthulhuSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Brain of Cthulhu's Soul", "Regen mana + -10% cost +5% magic damage at max mana") { }
+        public BrainofCthulhuSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Brain of Cthulhu's Soul", "Regen mana + -10% cost +8% magic damage at max mana") { }
         public override void SetStaticDefaults() {
             Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 4));
             ItemID.Sets.AnimatesAsSoul[item.type] = true;
@@ -15,7 +15,7 @@ namespace Tervania.Items.Souls.Boss {
             player.manaCost *= 0.9f;
             player.manaRegen += 2;
             if(player.statMana == player.statManaMax2){
-                player.magicDamage *= 1.05f;
+                player.magicDamage *= 1.08f;
             }
         }
     }
