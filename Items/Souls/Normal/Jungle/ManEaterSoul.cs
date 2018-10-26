@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Jungle {
     public class ManEaterSoul : BulletSoul {
-        public ManEaterSoul() : base(20, 300, 2, Item.buyPrice(0, 0, 10, 0), "Man Eater's Soul", "Shoots vines!") { }
+        public ManEaterSoul() : base(20, 300, 2, Item.buyPrice(0, 0, 10, 0), "Man Eater", "Shoots vines!") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

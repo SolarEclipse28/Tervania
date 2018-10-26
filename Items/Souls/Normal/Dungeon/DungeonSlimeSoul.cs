@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Dungeon {
     public class DungeonSlimeSoul : EnchantedSoul {
-        public DungeonSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Dungeon Slime's Soul", "Grants Luck") { }
+        public DungeonSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Dungeon Slime", "Grants Luck") { }
 
         public override void Update(Player player) {
             player.goldRing = true;

@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Hardmode.Overworld {
     public class MartianProbeSoul : BulletSoul {
-        public MartianProbeSoul() : base(5, 150, 2, Item.buyPrice(0, 0, 10, 0), "Martian Probe's Soul", "Touch the other side of the screen") { }
+        public MartianProbeSoul() : base(5, 150, 2, Item.buyPrice(0, 0, 10, 0), "Martian Probe", "Touch the other side of the screen") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

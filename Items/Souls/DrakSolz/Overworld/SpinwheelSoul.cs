@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
     public class SpinwheelSoul : EnchantedSoul {
-        public SpinwheelSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Spinwheel's Soul", "Mana cost decreases when low") { }
+        public SpinwheelSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Spinwheel", "Mana cost decreases when low") { }
 
         public override void Update(Player player) {
             if (player.statLife <= player.statLifeMax2 / 2) {

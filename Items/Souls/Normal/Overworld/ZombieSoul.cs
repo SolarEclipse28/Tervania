@@ -5,7 +5,7 @@ using Terraria.DataStructures;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class ZombieSoul : BulletSoul {
-        public ZombieSoul() : base(10, 240, 2, Item.buyPrice(0, 0, 10, 0), "Zombie's Soul", "Hurts you, fills your belly") { }
+        public ZombieSoul() : base(10, 240, 2, Item.buyPrice(0, 0, 10, 0), "Zombie", "Hurts you, fills your belly") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

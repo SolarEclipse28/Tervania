@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Event.Goblin {
     public class GoblinMageSoul : EnchantedSoul {
-        public GoblinMageSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Goblin Mage's Soul", "+5% increased magic damage and +2% crit") { }
+        public GoblinMageSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Goblin Mage", "+5% increased magic damage and +2% crit") { }
 
         public override void Update(Player player) {
             player.magicDamage *= 1.05f;

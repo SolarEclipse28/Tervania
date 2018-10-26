@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Crimson {
     public class CrimtaneGoldfishSoul : EnchantedSoul {
-        public CrimtaneGoldfishSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Crimtane Goldfish's Soul", "Life regen when wet!") { }
+        public CrimtaneGoldfishSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Crimtane Goldfish", "Life regen when wet!") { }
 
         public override void Update(Player player) {
             if (player.wet == true){

@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Hardmode.Underground {
     public class MedusaSoul : GuardianSoul {
-        public MedusaSoul() : base(5, 45, 3, Item.buyPrice(0, 0, 25, 0), "Medusa's Soul", "Surround yourself in protective stone!") { }
+        public MedusaSoul() : base(5, 45, 3, Item.buyPrice(0, 0, 25, 0), "Medusa", "Surround yourself in protective stone!") { }
 
         public override void Use(Player player) {
             player.immune = true;

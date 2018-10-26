@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underworld {
     public class LeechSoul : GuardianSoul {
-        public LeechSoul() : base(5, 100, 3, Item.buyPrice(0, 0, 25, 0), "Leech's Soul", "Heal 1hp per hit") { }
+        public LeechSoul() : base(5, 100, 3, Item.buyPrice(0, 0, 25, 0), "Leech", "Heal 1hp per hit") { }
 
         public override void Use(Player player) {
             if (player.lastCreatureHit >= 1) {

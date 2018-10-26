@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class MushiLadybugSoul : EnchantedSoul {
-        public MushiLadybugSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Mushi Ladybug's Soul", "Extra Jump") { }
+        public MushiLadybugSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Mushi Ladybug", "Extra Jump") { }
 
         public override void Update(Player player) {
             player.doubleJumpSail = true;

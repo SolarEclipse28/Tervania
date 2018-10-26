@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underworld {
     public class FireImpSoul : BulletSoul {
-        public FireImpSoul() : base(15, 120, 2, Item.buyPrice(0, 0, 10, 0), "Fire Imp's Soul", "Shoot Fire!") { }
+        public FireImpSoul() : base(15, 120, 2, Item.buyPrice(0, 0, 10, 0), "Fire Imp", "Shoot Fire!") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

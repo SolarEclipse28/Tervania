@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Corrupt {
     public class CorruptGoldfishSoul : EnchantedSoul {
-        public CorruptGoldfishSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Corrupt Goldfish's Soul", "Mana regen when wet!") { }
+        public CorruptGoldfishSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Corrupt Goldfish", "Mana regen when wet!") { }
 
         public override void Update(Player player) {
             if (player.wet == true){

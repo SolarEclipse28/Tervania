@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class CrawdadSoul : EnchantedSoul {
-        public CrawdadSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Crawdad's Soul", "5% Increased damage while standing still") { }
+        public CrawdadSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Crawdad", "5% Increased damage while standing still") { }
 
         public override void Update(Player player) {
             if (player.velocity.X == 0 && player.velocity.Y == 0){

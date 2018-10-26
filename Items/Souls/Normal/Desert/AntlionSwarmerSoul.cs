@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Desert {
     public class AntlionSwarmerSoul : EnchantedSoul {
-        public AntlionSwarmerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Antlion Swarmer's Soul", "Extra Jump") { }
+        public AntlionSwarmerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Antlion Swarmer", "Extra Jump") { }
 
         public override void Update(Player player) {
             player.doubleJumpSandstorm = true;

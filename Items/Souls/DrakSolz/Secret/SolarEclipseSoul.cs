@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Secret {
         public class SolarEclipseSoul : BulletSoul {
-            public SolarEclipseSoul() : base(20, 10, 2, Item.buyPrice(0, 0, 10, 0), "SolarEclipse's Soul", "Test your luck!") { }
+            public SolarEclipseSoul() : base(20, 10, 2, Item.buyPrice(0, 0, 10, 0), "SolarEclipse", "Test your luck!") { }
 
             public override void SetDefaults() {
                 base.SetDefaults();

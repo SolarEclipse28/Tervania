@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Ice {
     public class ViciousPenguinSoul : EnchantedSoul {
-        public ViciousPenguinSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Vicious Penguin's Soul", "+10hp") { }
+        public ViciousPenguinSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Vicious Penguin", "+10hp") { }
 
         public override void Update(Player player) {
             player.statLifeMax2 += 10;

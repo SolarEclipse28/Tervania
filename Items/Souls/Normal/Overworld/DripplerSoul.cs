@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class DripplerSoul : GuardianSoul {
-        public DripplerSoul() : base(2, 40, 3, Item.buyPrice(0, 0, 25, 0), "Drippler's Soul", "Restore Life") { }
+        public DripplerSoul() : base(2, 40, 3, Item.buyPrice(0, 0, 25, 0), "Drippler", "Restore Life") { }
 
         public override void Use(Player player) {
             player.AddBuff(BuffID.RapidHealing, 6);

@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
     public class NinjaSoul : GuardianSoul {
-        public NinjaSoul() : base(2, 70, 3, Item.buyPrice(0, 0, 25, 0), "Ninja's Soul", "Become a ninja!") { }
+        public NinjaSoul() : base(2, 70, 3, Item.buyPrice(0, 0, 25, 0), "Ninja", "Become a ninja!") { }
 
         public override void Use(Player player) {
             player.invis = true;

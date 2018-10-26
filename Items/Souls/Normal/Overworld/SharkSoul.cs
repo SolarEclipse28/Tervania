@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class SharkSoul : GuardianSoul {
-        public SharkSoul() : base(2, 35, 3, Item.buyPrice(0, 0, 25, 0), "Shark's Soul", "+5 Armor Penetration") { }
+        public SharkSoul() : base(2, 35, 3, Item.buyPrice(0, 0, 25, 0), "Shark", "+5 Armor Penetration") { }
 
         public override void Use(Player player) {
             player.armorPenetration += 5;

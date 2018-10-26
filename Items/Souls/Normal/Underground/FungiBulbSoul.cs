@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class FungiBulbSoul : BulletSoul {
-        public FungiBulbSoul() : base(20, 240, 2, Item.buyPrice(0, 0, 10, 0), "Fungi Bulb's Soul", "Shoot mushrooms!") { }
+        public FungiBulbSoul() : base(20, 240, 2, Item.buyPrice(0, 0, 10, 0), "Fungi Bulb", "Shoot mushrooms!") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

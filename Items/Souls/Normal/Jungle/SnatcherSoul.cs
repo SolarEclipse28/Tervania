@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Jungle {
     public class SnatcherSoul : BulletSoul {
-        public SnatcherSoul() : base(10, 600, 2, Item.buyPrice(0, 0, 10, 0), "Snatcher's Soul", "Shoots vines!") { }
+        public SnatcherSoul() : base(10, 600, 2, Item.buyPrice(0, 0, 10, 0), "Snatcher", "Shoots vines!") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class CrabSoul : EnchantedSoul {
-        public CrabSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Crab's Soul", "Move uninhibited through water") { }
+        public CrabSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Crab", "Move uninhibited through water") { }
 
         public override void Update(Player player) {
             player.ignoreWater = true;

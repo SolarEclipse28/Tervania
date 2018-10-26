@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Desert {
     public class TombCrawlerSoul : GuardianSoul {
-        public TombCrawlerSoul() : base(2, 60, 3, Item.buyPrice(0, 0, 25, 0), "Tomb Crawler's Soul", "Dig Faster") { }
+        public TombCrawlerSoul() : base(2, 60, 3, Item.buyPrice(0, 0, 25, 0), "Tomb Crawler", "Dig Faster") { }
 
         public override void Use(Player player) {
             player.pickSpeed *= 0.35f;

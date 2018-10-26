@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
     public class ChannelerSoul : EnchantedSoul {
-        public ChannelerSoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Channeler's Soul", "Increased stats. Dance dance!") { }
+        public ChannelerSoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Channeler", "Increased stats. Dance dance!") { }
 
         public override void Update(Player player) {
             player.meleeDamage *= 1.05f;

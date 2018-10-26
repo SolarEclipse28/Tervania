@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underworld {
     public class HellbatSoul : GuardianSoul {
-        public HellbatSoul() : base(2, 20, 3, Item.buyPrice(0, 0, 25, 0), "Hellbat's Soul", "Inflict fire on hit") { }
+        public HellbatSoul() : base(2, 20, 3, Item.buyPrice(0, 0, 25, 0), "Hellbat", "Inflict fire on hit") { }
 
         public override void Use(Player player) {
             player.AddBuff(BuffID.WeaponImbueFire, 6);

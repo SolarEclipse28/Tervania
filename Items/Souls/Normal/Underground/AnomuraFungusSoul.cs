@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class AnomuraFungusSoul : GuardianSoul {
-        public AnomuraFungusSoul() : base(5, 40, 3, Item.buyPrice(0, 0, 25, 0), "Anomura Fungus' Soul", "Gain massive strength") { }
+        public AnomuraFungusSoul() : base(5, 40, 3, Item.buyPrice(0, 0, 25, 0), "Anomura Fungus", "Gain massive strength") { }
 
         public override void Use(Player player) {
             player.kbBuff = true;

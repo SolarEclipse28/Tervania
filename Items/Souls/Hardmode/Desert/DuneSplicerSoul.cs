@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Hardmode.Desert {
     public class DuneSplicerSoul : GuardianSoul {
-        public DuneSplicerSoul() : base(2, 60, 3, Item.buyPrice(0, 0, 25, 0), "Dune Splicer's Soul", "Dig Much Faster") { }
+        public DuneSplicerSoul() : base(2, 60, 3, Item.buyPrice(0, 0, 25, 0), "Dune Splicer", "Dig Much Faster") { }
 
         public override void Use(Player player) {
             player.pickSpeed *= 0.15f;

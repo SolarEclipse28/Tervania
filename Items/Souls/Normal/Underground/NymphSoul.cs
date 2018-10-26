@@ -5,7 +5,7 @@ using Terraria.DataStructures;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class NymphSoul : BulletSoul {
-        public NymphSoul() : base(10, 3600, 2, Item.buyPrice(0, 0, 10, 0), "Nymph's Soul", "I wouldn't...") { }
+        public NymphSoul() : base(10, 3600, 2, Item.buyPrice(0, 0, 10, 0), "Nymph", "I wouldn't...") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

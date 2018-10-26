@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class GraniteGolemSoul : GuardianSoul {
-        public GraniteGolemSoul() : base(6, 40, 3, Item.buyPrice(0, 0, 25, 0), "Granite Golem's Soul", "Channel the Golem's invincibility") { }
+        public GraniteGolemSoul() : base(6, 40, 3, Item.buyPrice(0, 0, 25, 0), "Granite Golem", "Channel the Golem's invincibility") { }
 
         public override void Use(Player player) {
             player.immune = true;

@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
     public class PursuerSoul : EnchantedSoul {
-        public PursuerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "The Pursuer's Soul", "+6% melee damage, crit, and +12% melee speed. When condition is met.") { }
+        public PursuerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "The Pursuer", "+6% melee damage, crit, and +12% melee speed. When condition is met.") { }
 
         public override void Update(Player player) {
             if (player.Male == true) {

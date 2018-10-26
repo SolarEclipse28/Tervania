@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class DemonEyeSoul : EnchantedSoul {
-        public DemonEyeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Demon Eye's Soul", "Extra Jump") { }
+        public DemonEyeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Demon Eye", "Extra Jump") { }
 
         public override void Update(Player player) {
             player.doubleJumpCloud = true;

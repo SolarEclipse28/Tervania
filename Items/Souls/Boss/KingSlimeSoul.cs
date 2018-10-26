@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class KingSlimeSoul : GuardianSoul {
-        public KingSlimeSoul() : base(3, 50, 3, Item.buyPrice(0, 0, 25, 0), "King Slime's Soul", "+20 armor and bounce 75% of damage back", true) { }
+        public KingSlimeSoul() : base(3, 50, 3, Item.buyPrice(0, 0, 25, 0), "King Slime", "+20 armor and bounce 75% of damage back", true) { }
 
         public override void Use(Player player) {
             player.thorns += 0.75f;

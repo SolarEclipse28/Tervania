@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Jungle {
     public class JungleSlimeSoul : EnchantedSoul {
-        public JungleSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Jungle Slime's Soul", "Flower Walking") { }
+        public JungleSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Jungle Slime", "Flower Walking") { }
 
         public override void Update(Player player) {
             player.GetModPlayer<TervaniaPlayer>().FlowerWalk = true;

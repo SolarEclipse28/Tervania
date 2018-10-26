@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class BlackSlimeSoul : EnchantedSoul {
-        public BlackSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Black Slime's Soul", "+5% damage but blinded") { }
+        public BlackSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Black Slime", "+5% damage but blinded") { }
 
         public override void Update(Player player) {
             player.blind = true;

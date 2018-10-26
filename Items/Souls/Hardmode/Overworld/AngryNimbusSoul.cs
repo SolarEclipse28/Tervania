@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Hardmode.Overworld {
     public class AngryNimbusSoul : GuardianSoul {
-        public AngryNimbusSoul() : base(3, 60, 3, Item.buyPrice(0, 0, 25, 0), "Angry Nimbus's Soul", "Float upwards") { }
+        public AngryNimbusSoul() : base(3, 60, 3, Item.buyPrice(0, 0, 25, 0), "Angry Nimbus", "Float upwards") { }
 
         public override void Use(Player player) {
             player.velocity.Y = -0.7f;

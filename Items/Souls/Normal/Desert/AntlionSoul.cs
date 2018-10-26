@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Desert {
     public class AntlionSoul : BulletSoul {
-        public AntlionSoul() : base(10, 200, 2, Item.buyPrice(0, 0, 10, 0), "Antlion's Soul", "Shoots out compacted sand.") { }
+        public AntlionSoul() : base(10, 200, 2, Item.buyPrice(0, 0, 10, 0), "Antlion", "Shoots out compacted sand.") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Secret {
     public class XahlicemSoul : GuardianSoul {
-        public XahlicemSoul() : base(1, 60, 3, Item.buyPrice(0, 0, 25, 0), "Xahlicem's Soul", "Become the greatest magic user!") { }
+        public XahlicemSoul() : base(1, 60, 3, Item.buyPrice(0, 0, 25, 0), "Xahlicem", "Become the greatest magic user!") { }
 
         public override void Use(Player player) {
             player.armorEffectDrawShadow = true;

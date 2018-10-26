@@ -7,7 +7,7 @@ namespace Tervania.Items.Souls.Normal.Crimson
 {
     public class BloodCrawlerSoul : BulletSoul
     {
-        public BloodCrawlerSoul() : base(20, 2000, 2, Item.buyPrice(0, 0, 10, 0), "Blood Crawler's Soul", "+20 Mana") { }
+        public BloodCrawlerSoul() : base(20, 2000, 2, Item.buyPrice(0, 0, 10, 0), "Blood Crawler", "+20 Mana") { }
 
         public override void SetDefaults()
         {

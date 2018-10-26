@@ -26,7 +26,8 @@ namespace Tervania.Items.Souls {
         }
 
         public override void SetStaticDefaults() {
-            DisplayName.SetDefault(IName);
+            if (IName[IName.Length] == 's') DisplayName.SetDefault(IName + "' Soul");
+            else DisplayName.SetDefault(IName + "'s Soul");
             Tooltip.SetDefault(ITooltip);
             ItemID.Sets.ItemIconPulse[item.type] = true;
             ItemID.Sets.ItemNoGravity[item.type] = true;

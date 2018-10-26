@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class SeaSnailSoul : EnchantedSoul {
-        public SeaSnailSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Sea Snail's Soul", "Defense in Water") { }
+        public SeaSnailSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Sea Snail", "Defense in Water") { }
 
         public override void Update(Player player) {
             if (player.wet == true){

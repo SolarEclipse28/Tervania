@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Event.Goblin {
     public class GoblinPeonSoul : EnchantedSoul {
-        public GoblinPeonSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Goblin Peon's Soul", "+5% increased throwing damage and +5% crit") { }
+        public GoblinPeonSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Goblin Peon", "+5% increased throwing damage and +5% crit") { }
 
         public override void Update(Player player) {
             player.thrownDamage *= 1.05f;

@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
     public class HallowDogSoul : GuardianSoul {
-        public HallowDogSoul() : base(1, 50, 3, Item.buyPrice(0, 0, 25, 0), "Hallow Dog's Soul", "Consume life for speed!") { }
+        public HallowDogSoul() : base(1, 50, 3, Item.buyPrice(0, 0, 25, 0), "Hallow Dog", "Consume life for speed!") { }
 
         public override void Use(Player player) {
             player.statLife -= 1;

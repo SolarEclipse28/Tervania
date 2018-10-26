@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class JellyfishSoul : BulletSoul {
-        public JellyfishSoul() : base(20, 420, 2, Item.buyPrice(0, 0, 10, 0), "Jellyfish's Soul", "Illuminate the dark!") { }
+        public JellyfishSoul() : base(20, 420, 2, Item.buyPrice(0, 0, 10, 0), "Jellyfish", "Illuminate the dark!") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

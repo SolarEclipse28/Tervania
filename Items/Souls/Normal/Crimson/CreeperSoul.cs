@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Crimson {
     public class CreeperSoul : EnchantedSoul {
-        public CreeperSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Creeper's Soul", "+20 Mana") { }
+        public CreeperSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Creeper", "+20 Mana") { }
 
         public override void Update(Player player) {
             player.statManaMax2 += 20;

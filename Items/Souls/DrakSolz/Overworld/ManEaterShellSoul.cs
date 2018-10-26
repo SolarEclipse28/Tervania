@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
     public class ManEaterShellSoul : EnchantedSoul {
-        public ManEaterShellSoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Man Eater Shell's Soul", "+8% crit and +5 defense while wet.") { }
+        public ManEaterShellSoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Man Eater Shell", "+8% crit and +5 defense while wet.") { }
 
         public override void Update(Player player) {
             if(player.wet == true){

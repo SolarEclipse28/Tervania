@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class FlyingFishSoul : EnchantedSoul {
-        public FlyingFishSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Flying Fish's Soul", "Aerial Mobility") { }
+        public FlyingFishSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Flying Fish", "Aerial Mobility") { }
 
         public override void Update(Player player) {
             if (player.velocity.Y != 0){

@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Ice {
     public class UndeadVikingSoul : EnchantedSoul {
-        public UndeadVikingSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Undead Viking's Soul", "+2% Crit Chance") { }
+        public UndeadVikingSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Undead Viking", "+2% Crit Chance") { }
 
         public override void Update(Player player) {
             player.meleeCrit += 2;

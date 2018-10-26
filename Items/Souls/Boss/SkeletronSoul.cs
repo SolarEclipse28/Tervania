@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class SkeletronSoul : EnchantedSoul {
-        public SkeletronSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Skeletron's Soul", "Lower max mana but +10% damage", true) { }
+        public SkeletronSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Skeletron", "Lower max mana but +10% damage", true) { }
 
         public override void Update(Player player) {
             if (player.statMana >(player.statManaMax2 * 0.5)) {

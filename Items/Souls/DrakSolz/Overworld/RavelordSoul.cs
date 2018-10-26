@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
     public class RavelordSoul : EnchantedSoul {
-        public RavelordSoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Ravelord's Soul", "+15% minion damage and melee damage but -10% melee speed.") { }
+        public RavelordSoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Ravelord", "+15% minion damage and melee damage but -10% melee speed.") { }
 
         public override void Update(Player player) {
             player.minionDamage *= 1.15f;

@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
     public class DesertSorceressSoul : EnchantedSoul {
-        public DesertSorceressSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Desert Sorceress's Soul", "+6% magic damage, crit, and reduced mana cost. When condition is met.") { }
+        public DesertSorceressSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Desert Sorceress", "+6% magic damage, crit, and reduced mana cost. When condition is met.") { }
 
         public override void Update(Player player) {
             if (player.Male == false) {

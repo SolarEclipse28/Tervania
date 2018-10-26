@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class SquidSoul : EnchantedSoul {
-        public SquidSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Squid's Soul", "Ability to Swim") { }
+        public SquidSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Squid", "Ability to Swim") { }
 
         public override void Update(Player player) {
             player.accFlipper = true;

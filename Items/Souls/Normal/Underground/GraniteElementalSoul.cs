@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class GraniteElementalSoul : GuardianSoul {
-        public GraniteElementalSoul() : base(5, 40, 3, Item.buyPrice(0, 0, 25, 0), "Granite Elemental's Soul", "Avoid damage from heights") { }
+        public GraniteElementalSoul() : base(5, 40, 3, Item.buyPrice(0, 0, 25, 0), "Granite Elemental", "Avoid damage from heights") { }
 
         public override void Use(Player player) {
             player.noFallDmg = true;

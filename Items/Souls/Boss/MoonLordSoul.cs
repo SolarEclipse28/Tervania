@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class MoonLordSoul : EnchantedSoul {
-        public MoonLordSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Moon Lord's Soul", "Out of this world", true) { }
+        public MoonLordSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Moon Lord", "Out of this world", true) { }
 
         public override void Update(Player player) {
             player.statDefense += 5;

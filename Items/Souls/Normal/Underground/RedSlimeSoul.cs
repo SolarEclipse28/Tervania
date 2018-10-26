@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class RedSlimeSoul : EnchantedSoul {
-        public RedSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Red Slime's Soul", "+2% damage") { }
+        public RedSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Red Slime", "+2% damage") { }
 
         public override void Update(Player player) {
             player.meleeDamage *= 1.02f;

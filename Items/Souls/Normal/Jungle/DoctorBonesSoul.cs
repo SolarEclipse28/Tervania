@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Jungle {
     public class DoctorBonesSoul : GuardianSoul {
-        public DoctorBonesSoul() : base(2, 30, 3, Item.buyPrice(0, 0, 25, 0), "Doctor Bones's Soul", "Detect Enemies") { }
+        public DoctorBonesSoul() : base(2, 30, 3, Item.buyPrice(0, 0, 25, 0), "Doctor Bones", "Detect Enemies") { }
 
         public override void Use(Player player) {
             player.AddBuff(BuffID.Dangersense, 6);

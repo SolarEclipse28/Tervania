@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Dungeon {
     public class DarkCasterSoul : EnchantedSoul {
-        public DarkCasterSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Dark Caster's Soul", "5% Increased Magic damage") { }
+        public DarkCasterSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Dark Caster", "5% Increased Magic damage") { }
 
         public override void Update(Player player) {
             player.magicDamage *= 1.05f;

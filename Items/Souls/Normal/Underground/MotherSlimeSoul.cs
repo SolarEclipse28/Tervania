@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class MotherSlimeSoul : EnchantedSoul {
-        public MotherSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Mother Slime's Soul", "+1 max minions") { }
+        public MotherSlimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Mother Slime", "+1 max minions") { }
 
         public override void Update(Player player) {
             player.maxMinions += 1;

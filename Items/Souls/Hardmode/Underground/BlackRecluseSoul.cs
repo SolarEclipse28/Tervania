@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Hardmode.Underground {
     public class BlackRecluseSoul : GuardianSoul {
-        public BlackRecluseSoul() : base(2, 25, 3, Item.buyPrice(0, 0, 25, 0), "Black Recluse's Soul", "Weapons inflict Venom on hit") { }
+        public BlackRecluseSoul() : base(2, 25, 3, Item.buyPrice(0, 0, 25, 0), "Black Recluse", "Weapons inflict Venom on hit") { }
 
         public override void Use(Player player) {
             player.AddBuff(BuffID.WeaponImbueVenom, 6);

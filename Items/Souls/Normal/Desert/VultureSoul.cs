@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Desert {
     public class VultureSoul : EnchantedSoul {
-        public VultureSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Vulture's Soul", "Increased heart and star pick up range.") { }
+        public VultureSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Vulture", "Increased heart and star pick up range.") { }
 
         public override void Update(Player player) {
             player.lifeMagnet = true;

@@ -7,7 +7,7 @@ namespace Tervania.Items.Souls.Normal.Underworld
 {
     public class TheHungrySoul : BulletSoul
     {
-        public TheHungrySoul() : base(200, 7200, 2, Item.buyPrice(0, 0, 10, 0), "The Hungry's Soul", "Consumes an item to heal you. Consumes 1 from stacks.") { }
+        public TheHungrySoul() : base(200, 7200, 2, Item.buyPrice(0, 0, 10, 0), "The Hungry", "Consumes an item to heal you. Consumes 1 from stacks.") { }
 
         public override void SetDefaults()
         {

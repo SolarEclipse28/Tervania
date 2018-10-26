@@ -4,7 +4,7 @@ using Terraria.ID;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class UndeadMinerSoul : EnchantedSoul {
-        public UndeadMinerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Undead Miner's Soul", "Enjoy Mining!") { }
+        public UndeadMinerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Undead Miner", "Enjoy Mining!") { }
 
         public override void Update(Player player) {
             player.AddBuff(BuffID.Shine, 6);

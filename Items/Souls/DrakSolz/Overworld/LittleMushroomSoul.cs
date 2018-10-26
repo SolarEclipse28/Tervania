@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
     public class LittleMushroomSoul : EnchantedSoul {
-        public LittleMushroomSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Little Mushroom's Soul", "Speed increases when low") { }
+        public LittleMushroomSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Little Mushroom", "Speed increases when low") { }
 
         public override void Update(Player player) {
             if (player.statLife <= player.statLifeMax2 / 3) {

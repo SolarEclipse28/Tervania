@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Desert {
     public class AngryTumblerSoul : EnchantedSoul {
-        public AngryTumblerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Angry Tumbler's Soul", "Damage increases based on movement. Up to 20% at 40mph.") { }
+        public AngryTumblerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Angry Tumbler", "Damage increases based on movement. Up to 20% at 40mph.") { }
 
         public override void Update(Player player) {
             float spd = player.velocity.X;

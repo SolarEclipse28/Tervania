@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Jungle {
     public class JungleBatSoul : EnchantedSoul {
-        public JungleBatSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Jungle Bat's Soul", "Extra Jump") { }
+        public JungleBatSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Jungle Bat", "Extra Jump") { }
 
         public override void Update(Player player) {
             player.doubleJumpFart = true;

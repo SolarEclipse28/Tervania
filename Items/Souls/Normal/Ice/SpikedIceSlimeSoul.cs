@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Ice {
     public class SpikedIceSlimeSoul : BulletSoul {
-        public SpikedIceSlimeSoul() : base(10, 60, 2, Item.buyPrice(0, 0, 10, 0), "Spiked Ice Slime's Soul", "Shoots icey spikes!") { }
+        public SpikedIceSlimeSoul() : base(10, 60, 2, Item.buyPrice(0, 0, 10, 0), "Spiked Ice Slime", "Shoots icey spikes!") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

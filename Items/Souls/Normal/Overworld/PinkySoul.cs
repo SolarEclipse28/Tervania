@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class PinkySoul : BulletSoul {
-        public PinkySoul() : base(20, 600, 2, Item.buyPrice(0, 0, 10, 0), "Pinky's Soul", "Throws a bouncy grenade!") { }
+        public PinkySoul() : base(20, 600, 2, Item.buyPrice(0, 0, 10, 0), "Pinky", "Throws a bouncy grenade!") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

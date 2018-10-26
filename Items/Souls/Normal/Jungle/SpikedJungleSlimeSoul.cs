@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Jungle {
     public class SpikedJungleSlimeSoul : BulletSoul {
-        public SpikedJungleSlimeSoul() : base(10, 60, 2, Item.buyPrice(0, 0, 10, 0), "Spiked Jungle Slime's Soul", "Shoots verdant spikes!") { }
+        public SpikedJungleSlimeSoul() : base(10, 60, 2, Item.buyPrice(0, 0, 10, 0), "Spiked Jungle Slime", "Shoots verdant spikes!") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

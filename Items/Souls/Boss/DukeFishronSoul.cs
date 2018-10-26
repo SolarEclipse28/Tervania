@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class DukeFishronSoul : BulletSoul {
-        public DukeFishronSoul() : base(15, 120, 2, Item.buyPrice(0, 0, 10, 0), "Duke Fishron's Soul", "Shoots out a gross tendon!", true) { }
+        public DukeFishronSoul() : base(15, 120, 2, Item.buyPrice(0, 0, 10, 0), "Duke Fishron", "Shoots out a gross tendon!", true) { }
 
         public override void SetDefaults() {
             base.SetDefaults();

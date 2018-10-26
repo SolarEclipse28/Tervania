@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Event.Goblin {
     public class GoblinArcherSoul : EnchantedSoul {
-        public GoblinArcherSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Goblin Archer's Soul", "+5% increased ranged damage") { }
+        public GoblinArcherSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Goblin Archer", "+5% increased ranged damage") { }
 
         public override void Update(Player player) {
             player.rangedDamage *= 1.05f;

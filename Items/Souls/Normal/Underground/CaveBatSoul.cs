@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class CaveBatSoul : EnchantedSoul {
-        public CaveBatSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Cave Bat's Soul", "Improved Night Vision") { }
+        public CaveBatSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Cave Bat", "Improved Night Vision") { }
 
         public override void Update(Player player) {
             player.nightVision = true;

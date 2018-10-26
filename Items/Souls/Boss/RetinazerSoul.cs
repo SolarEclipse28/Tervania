@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class RetinazerSoul : BulletSoul {
-        public RetinazerSoul() : base(15, 120, 2, Item.buyPrice(0, 0, 10, 0), "Retinazer's Soul", "Shoots out a gross tendon!", true) { }
+        public RetinazerSoul() : base(15, 120, 2, Item.buyPrice(0, 0, 10, 0), "Retinazer", "Shoots out a gross tendon!", true) { }
 
         public override void SetDefaults() {
             base.SetDefaults();

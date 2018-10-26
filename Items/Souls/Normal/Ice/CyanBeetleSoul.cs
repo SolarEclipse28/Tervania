@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Ice {
     public class CyanBeetleSoul : EnchantedSoul {
-        public CyanBeetleSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Cyan Beetle's Soul", "+4 defense but chilled") { }
+        public CyanBeetleSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Cyan Beetle", "+4 defense but chilled") { }
 
         public override void Update(Player player) {
             player.statDefense += 4;

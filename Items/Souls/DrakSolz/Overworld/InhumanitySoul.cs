@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
     public class InhumanitySoul : EnchantedSoul {
-        public InhumanitySoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Inhumanity's Soul", "+15% minion damage and +3 max minions") { }
+        public InhumanitySoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Inhumanity", "+15% minion damage and +3 max minions") { }
 
         public override void Update(Player player) {
             player.minionDamage *= 1.15f;

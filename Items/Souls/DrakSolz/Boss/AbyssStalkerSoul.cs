@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Boss {
     public class AbyssStalkerSoul : EnchantedSoul {
-        public AbyssStalkerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Abyss Stalker's Soul", "The Abyss overtakes you. Consumes you.", true) { }
+        public AbyssStalkerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Abyss Stalker", "The Abyss overtakes you. Consumes you.", true) { }
 
         public override void Update(Player player) {
             player.meleeSpeed *= 1.2f;

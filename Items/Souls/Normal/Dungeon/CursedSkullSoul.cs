@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Dungeon {
     public class CursedSkullSoul : EnchantedSoul {
-        public CursedSkullSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Cursed Skull's Soul", "5% Increased Ranged damage") { }
+        public CursedSkullSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Cursed Skull", "5% Increased Ranged damage") { }
 
         public override void Update(Player player) {
             player.rangedDamage *= 1.05f;

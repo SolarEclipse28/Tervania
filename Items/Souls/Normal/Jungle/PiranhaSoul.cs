@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Jungle {
     public class PiranhaSoul : GuardianSoul {
-        public PiranhaSoul() : base(3, 40, 3, Item.buyPrice(0, 0, 25, 0), "Piranha's Soul", "+40% faster attack speed") { }
+        public PiranhaSoul() : base(3, 40, 3, Item.buyPrice(0, 0, 25, 0), "Piranha", "+40% faster attack speed") { }
 
         public override void Use(Player player) {
             player.meleeSpeed *= 1.4f;

@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
     public class DragonSlayerSoul : EnchantedSoul {
-        public DragonSlayerSoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Dragon Slayer's Soul", "+8% damage while moving and +5 defense.") { }
+        public DragonSlayerSoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Dragon Slayer", "+8% damage while moving and +5 defense.") { }
 
         public override void Update(Player player) {
             if(player.velocity.X != 0){

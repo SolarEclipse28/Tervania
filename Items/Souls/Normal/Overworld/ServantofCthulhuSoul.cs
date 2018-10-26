@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class ServantofCthulhuSoul : EnchantedSoul {
-        public ServantofCthulhuSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Servant of Cthulhu's Soul", "Increases view range while holding right click") { }
+        public ServantofCthulhuSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Servant of Cthulhu", "Increases view range while holding right click") { }
 
         public override void Update(Player player) {    
             player.scope = true;

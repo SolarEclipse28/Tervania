@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Secret {
     public class KeroKhiSoul : EnchantedSoul {
-        public KeroKhiSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "KeroKhi's Soul", "1 minion, 1 purpose.") { }
+        public KeroKhiSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "KeroKhi", "1 minion, 1 purpose.") { }
 
         public override void Update(Player player) {
             float dmg = player.maxMinions;

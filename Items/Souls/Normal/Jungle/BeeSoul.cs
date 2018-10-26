@@ -5,7 +5,7 @@ using Terraria.DataStructures;
 
 namespace Tervania.Items.Souls.Normal.Jungle {
     public class BeeSoul : GuardianSoul {
-        public BeeSoul() : base(10, 60, 3, Item.buyPrice(0, 0, 25, 0), "Bee's Soul", "Release bees") { }
+        public BeeSoul() : base(10, 60, 3, Item.buyPrice(0, 0, 25, 0), "Bee", "Release bees") { }
 
         public override void Use(Player player) {
             player.bee = true;

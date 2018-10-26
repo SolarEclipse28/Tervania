@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Jungle {
     public class LacBeetleSoul : EnchantedSoul {
-        public LacBeetleSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Lac Beetle's Soul", "Life Regen") { }
+        public LacBeetleSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Lac Beetle", "Life Regen") { }
 
         public override void Update(Player player) {
             player.lifeRegen += 2;

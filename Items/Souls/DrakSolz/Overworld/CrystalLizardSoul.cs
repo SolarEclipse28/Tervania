@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
     public class CrystalLizardSoul : EnchantedSoul {
-        public CrystalLizardSoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Crystal Lizard's Soul", "???") { }
+        public CrystalLizardSoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Crystal Lizard", "???") { }
 
         public override void Update(Player player) {
             player.armorEffectDrawOutlinesForbidden = true;

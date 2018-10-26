@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
     public class FireWitchSoul : EnchantedSoul {
-        public FireWitchSoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Flame Warmage's Soul", "+15% damage while standing still.") { }
+        public FireWitchSoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Flame Warmage", "+15% damage while standing still.") { }
 
         public override void Update(Player player) {
             if(player.velocity.X == 0 && player.velocity.Y == 0){

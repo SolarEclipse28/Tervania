@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class RaincoatZombieSoul : EnchantedSoul {
-        public RaincoatZombieSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Raincoat Zombie's Soul", "5% Increased damage in the rain") { }
+        public RaincoatZombieSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Raincoat Zombie", "5% Increased damage in the rain") { }
 
         public override void Update(Player player) {
             if (Main.raining == true){

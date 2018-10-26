@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class SalamanderSoul : BulletSoul {
-        public SalamanderSoul() : base(10, 60, 2, Item.buyPrice(0, 0, 10, 0), "Salamander's Soul", "Spit Acid!") { }
+        public SalamanderSoul() : base(10, 60, 2, Item.buyPrice(0, 0, 10, 0), "Salamander", "Spit Acid!") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

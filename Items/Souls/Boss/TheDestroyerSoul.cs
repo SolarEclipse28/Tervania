@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class TheDestroyerSoul : EnchantedSoul {
-        public TheDestroyerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "The Destroyer's Soul", "Increased defenses", true) { }
+        public TheDestroyerSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "The Destroyer", "Increased defenses", true) { }
 
         public override void Update(Player player) {
             player.statDefense += 8;

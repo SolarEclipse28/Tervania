@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class HopliteSoul : BulletSoul {
-        public HopliteSoul() : base(10, 60, 2, Item.buyPrice(0, 0, 10, 0), "Hoplite's Soul", "Shoots javelins!") { }
+        public HopliteSoul() : base(10, 60, 2, Item.buyPrice(0, 0, 10, 0), "Hoplite", "Shoots javelins!") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

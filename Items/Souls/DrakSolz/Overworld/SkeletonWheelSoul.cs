@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Overworld {
     public class SkeletonWheelSoul : EnchantedSoul {
-        public SkeletonWheelSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Skeleton Wheel's Soul", "Thorns and unimpeded movement!") { }
+        public SkeletonWheelSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Skeleton Wheel", "Thorns and unimpeded movement!") { }
 
         public override void Update(Player player) {
             player.slippy = true;

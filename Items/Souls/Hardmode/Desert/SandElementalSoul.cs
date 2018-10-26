@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Hardmode.Desert {
     public class SandElementalSoul : BulletSoul {
-        public SandElementalSoul() : base(40, 300, 2, Item.buyPrice(0, 0, 10, 0), "SandElemental's Soul", "Surround yourself in a cloud of sand") { }
+        public SandElementalSoul() : base(40, 300, 2, Item.buyPrice(0, 0, 10, 0), "SandElemental", "Surround yourself in a cloud of sand") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

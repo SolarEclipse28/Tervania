@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Underground {
     public class SkeletonSoul : BulletSoul {
-        public SkeletonSoul() : base(10, 60, 2, Item.buyPrice(0, 0, 10, 0), "Skeleton's Soul", "Throw a bone!") { }
+        public SkeletonSoul() : base(10, 60, 2, Item.buyPrice(0, 0, 10, 0), "Skeleton", "Throw a bone!") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

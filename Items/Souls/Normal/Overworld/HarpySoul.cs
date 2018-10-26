@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class HarpySoul : BulletSoul {
-        public HarpySoul() : base(8, 120, 2, Item.buyPrice(0, 0, 10, 0), "Harpy's Soul", "Shoots feathers!") { }
+        public HarpySoul() : base(8, 120, 2, Item.buyPrice(0, 0, 10, 0), "Harpy", "Shoots feathers!") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

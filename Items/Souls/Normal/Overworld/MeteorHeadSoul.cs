@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class MeteorHeadSoul : EnchantedSoul {
-        public MeteorHeadSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Meteor Head's Soul", "Walk on Fire!") { }
+        public MeteorHeadSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Meteor Head", "Walk on Fire!") { }
 
         public override void Update(Player player) {
             player.fireWalk = true;

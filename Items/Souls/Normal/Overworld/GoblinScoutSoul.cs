@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class GoblinScoutSoul : GuardianSoul {
-        public GoblinScoutSoul() : base(2, 30, 3, Item.buyPrice(0, 0, 25, 0), "Goblin Scout's Soul", "Detect Enemies") { }
+        public GoblinScoutSoul() : base(2, 30, 3, Item.buyPrice(0, 0, 25, 0), "Goblin Scout", "Detect Enemies") { }
 
         public override void Use(Player player) {
             player.AddBuff(BuffID.Hunter, 6);

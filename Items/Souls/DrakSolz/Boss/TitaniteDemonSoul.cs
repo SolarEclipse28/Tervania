@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.DrakSolz.Boss {
     public class TitaniteDemonSoul : EnchantedSoul {
-        public TitaniteDemonSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Titanite Demon's Soul", "Grants increased air technique and better jumping.", true) { }
+        public TitaniteDemonSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Titanite Demon", "Grants increased air technique and better jumping.", true) { }
 
         public override void Update(Player player) {
             if (player.velocity.Y != 0) {

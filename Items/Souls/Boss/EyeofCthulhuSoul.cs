@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class EyeofCthulhuSoul : EnchantedSoul {
-        public EyeofCthulhuSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Eye of Cthulhu' Soul", "Regenerate at low life", true) { }
+        public EyeofCthulhuSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Eye of Cthulhu", "Regenerate at low life", true) { }
 
         public override void Update(Player player) {
             if (player.statLife <= (player.statLifeMax2 / 2)) {

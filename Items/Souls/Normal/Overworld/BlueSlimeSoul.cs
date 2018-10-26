@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Overworld {
     public class BlueSlimeSoul : BulletSoul {
-        public BlueSlimeSoul() : base(5, 150, 2, Item.buyPrice(0, 0, 10, 0), "Blue Slime's Soul", "Shoots a stream of deadly luke-warm water") { }
+        public BlueSlimeSoul() : base(5, 150, 2, Item.buyPrice(0, 0, 10, 0), "Blue Slime", "Shoots a stream of deadly luke-warm water") { }
 
         public override void SetDefaults() {
             base.SetDefaults();

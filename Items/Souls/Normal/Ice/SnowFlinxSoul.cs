@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Normal.Ice {
     public class SnowFlinxSoul : GuardianSoul {
-        public SnowFlinxSoul() : base(3, 45, 3, Item.buyPrice(0, 0, 25, 0), "Snow Flinx's Soul", "Jump higher, fall and run faster") { }
+        public SnowFlinxSoul() : base(3, 45, 3, Item.buyPrice(0, 0, 25, 0), "Snow Flinx", "Jump higher, fall and run faster") { }
 
         public override void Use(Player player) {
             player.moveSpeed *= 2f;
