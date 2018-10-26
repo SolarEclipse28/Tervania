@@ -16,13 +16,13 @@ namespace Tervania.UI {
         private TervaniaPlayer player;
 
         private UIPanel ePanel;
-        private UIImage eIcon;
+        private UIImageFramed eIcon;
 
         private UIPanel bPanel;
-        private UIImage bIcon;
+        private UIImageFramed bIcon;
 
         private UIPanel gPanel;
-        private UIImage gIcon;
+        private UIImageFramed gIcon;
 
         public override void OnInitialize() {
 
@@ -101,13 +101,18 @@ namespace Tervania.UI {
                     Main.hoverItemName = player.enchantedSoul.Name;
                 }
 
+                int type = player.enchantedSoul.type;
+
                 if (!ePanel.HasChild(eIcon) && player.enchantedSoul.modItem != null) {
-                    eIcon = new UIImage(ModLoader.GetTexture(player.enchantedSoul.modItem.Texture));
+                    eIcon = new UIImageFramed(Main.itemTexture[type], new Rectangle(0, 0, 36, 36));
                     eIcon.Left.Set(4, 0f);
                     eIcon.Top.Set(4, 0f);
                     eIcon.Width.Set(38, 0f);
                     eIcon.Height.Set(38, 0f);
                     ePanel.Append(eIcon);
+                }
+                if (Main.itemAnimations[type] != null) {
+                    eIcon.SetFrame(Main.itemAnimations[type].GetFrame(Main.itemTexture[type]));
                 }
 
                 ePanel.Left.Set(496, 0f);
@@ -121,13 +126,18 @@ namespace Tervania.UI {
                     Main.hoverItemName = player.bulletSoul.Name;
                 }
 
+                int type = player.bulletSoul.type;
+
                 if (!bPanel.HasChild(bIcon) && player.bulletSoul.modItem != null) {
-                    bIcon = new UIImage(ModLoader.GetTexture(player.bulletSoul.modItem.Texture));
+                    bIcon = new UIImageFramed(Main.itemTexture[player.bulletSoul.type], new Rectangle(0, 0, 36, 36));
                     bIcon.Left.Set(4, 0f);
                     bIcon.Top.Set(4, 0f);
                     bIcon.Width.Set(38, 0f);
                     bIcon.Height.Set(38, 0f);
                     bPanel.Append(bIcon);
+                }
+                if (Main.itemAnimations[type] != null) {
+                    bIcon.SetFrame(Main.itemAnimations[type].GetFrame(Main.itemTexture[type]));
                 }
 
                 bPanel.Left.Set(542, 0f);
@@ -141,13 +151,18 @@ namespace Tervania.UI {
                     Main.hoverItemName = player.guardianSoul.Name;
                 }
 
+                int type = player.guardianSoul.type;
+
                 if (!gPanel.HasChild(gIcon) && player.guardianSoul.modItem != null) {
-                    gIcon = new UIImage(ModLoader.GetTexture(player.guardianSoul.modItem.Texture));
+                    gIcon = new UIImageFramed(Main.itemTexture[player.guardianSoul.type], new Rectangle(0, 0, 36, 36));
                     gIcon.Left.Set(4, 0f);
                     gIcon.Top.Set(4, 0f);
                     gIcon.Width.Set(38, 0f);
                     gIcon.Height.Set(38, 0f);
                     gPanel.Append(gIcon);
+                }
+                if (Main.itemAnimations[type] != null) {
+                    gIcon.SetFrame(Main.itemAnimations[type].GetFrame(Main.itemTexture[type]));
                 }
 
                 gPanel.Left.Set(588, 0f);
