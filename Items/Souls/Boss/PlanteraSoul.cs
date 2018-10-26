@@ -5,11 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class PlanteraSoul : BulletSoul {
-        public PlanteraSoul() : base(15, 120, 2, Item.buyPrice(0, 0, 10, 0), "Plantera's Soul", "Shoots out a gross tendon!") { }
-        public override void SetStaticDefaults() {
-            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 4));
-            ItemID.Sets.AnimatesAsSoul[item.type] = true;
-        }
+        public PlanteraSoul() : base(15, 120, 2, Item.buyPrice(0, 0, 10, 0), "Plantera's Soul", "Shoots out a gross tendon!", true) { }
 
         public override void SetDefaults() {
             base.SetDefaults();

@@ -5,11 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class SkeletronPrimeSoul : EnchantedSoul {
-        public SkeletronPrimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Skeletron Prime's Soul", "+100% thorns and life regen.") { }
-        public override void SetStaticDefaults() {
-            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 4));
-            ItemID.Sets.AnimatesAsSoul[item.type] = true;
-        }
+        public SkeletronPrimeSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Skeletron Prime's Soul", "+100% thorns and life regen.", true) { }
 
         public override void Update(Player player) {
             player.thorns += 1;

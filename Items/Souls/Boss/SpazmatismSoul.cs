@@ -5,11 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class SpazmatismSoul : EnchantedSoul {
-        public SpazmatismSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Spazmatism's Soul", "Lowered defenses but increased speed") { }
-        public override void SetStaticDefaults() {
-            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 4));
-            ItemID.Sets.AnimatesAsSoul[item.type] = true;
-        }
+        public SpazmatismSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Spazmatism's Soul", "Lowered defenses but increased speed", true) { }
 
         public override void Update(Player player) {
             player.statDefense -= 10;

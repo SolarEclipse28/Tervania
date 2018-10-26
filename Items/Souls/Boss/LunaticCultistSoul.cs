@@ -5,11 +5,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls.Boss {
     public class LunaticCultistSoul : EnchantedSoul {
-        public LunaticCultistSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Lunatic Cultist's Soul", "Lower max life but +10% damage and crit") { }
-        public override void SetStaticDefaults() {
-            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 4));
-            ItemID.Sets.AnimatesAsSoul[item.type] = true;
-        }
+        public LunaticCultistSoul() : base(2, Item.buyPrice(0, 0, 10, 0), "Lunatic Cultist's Soul", "Lower max life but +10% damage and crit", true) { }
 
         public override void Update(Player player) {
             if (player.statLife >(player.statLifeMax2 * 0.65)) {

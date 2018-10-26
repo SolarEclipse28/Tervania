@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls {
     public abstract class EnchantedSoul : Soul {
-        public EnchantedSoul(int rare = 2, int value = 10, string name = "Soul", string tooltip = "Soul of the fallen.") : base(rare, value, name, tooltip) { }
+        public EnchantedSoul(int rare = 2, int value = 10, string name = "Soul", string tooltip = "Soul of the fallen.", bool boss = false) : base(rare, value, name, tooltip, boss) { }
 
         public override void RightClick(Player player) => player.GetModPlayer<TervaniaPlayer>().SetESoul(item, true);
 

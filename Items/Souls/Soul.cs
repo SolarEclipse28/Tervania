@@ -1,7 +1,10 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.GameContent.UI.Elements;
 using Terraria.ModLoader;
 
 namespace Tervania.Items.Souls {
@@ -10,14 +13,16 @@ namespace Tervania.Items.Souls {
         public int IValue { get; internal set; }
         public string IName { get; internal set; }
         public string ITooltip { get; internal set; }
+        public bool Boss { get; internal set; }
 
         protected TooltipLine line;
 
-        public Soul(int rare = 2, int value = 10, string name = "Soul", string tooltip = "Soul of the fallen.") {
+        public Soul(int rare = 2, int value = 10, string name = "Soul", string tooltip = "Soul of the fallen.", bool boss = false) {
             IRare = rare;
             IValue = value;
             IName = name;
             ITooltip = tooltip;
+            Boss = boss;
         }
 
         public override void SetStaticDefaults() {
@@ -25,6 +30,9 @@ namespace Tervania.Items.Souls {
             Tooltip.SetDefault(ITooltip);
             ItemID.Sets.ItemIconPulse[item.type] = true;
             ItemID.Sets.ItemNoGravity[item.type] = true;
+            if (!Boss) return;
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 4));
+            ItemID.Sets.AnimatesAsSoul[item.type] = true;
         }
 
         public override void SetDefaults() {

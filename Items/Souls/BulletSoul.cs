@@ -8,8 +8,8 @@ namespace Tervania.Items.Souls {
         public int IShoot { get; internal set; }
         public int IMana { get; internal set; }
         public int IUseTime { get; internal set; }
-        public BulletSoul(int mana = 5, int useTime = 90, int rare = 2, int value = 10, string name = "Bullet Soul", string tooltip = "Soul of the fallen."):
-            base(rare, value, name, tooltip) {
+        public BulletSoul(int mana = 5, int useTime = 90, int rare = 2, int value = 10, string name = "Bullet Soul", string tooltip = "Soul of the fallen.", bool boss = false):
+            base(rare, value, name, tooltip, boss) {
                 IMana = mana;
                 IUseTime = useTime;
             }
