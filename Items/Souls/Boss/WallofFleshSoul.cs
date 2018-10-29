@@ -14,11 +14,10 @@ namespace Tervania.Items.Souls.Boss {
             item.mana = IMana;
             item.knockBack = 6.0f;
             item.shootSpeed = 6.0f;
-            item.shoot = ProjectileID.TendonHook;
         }
 
         public override int CreateProjectile(Player player, ref Microsoft.Xna.Framework.Vector2 dir) {
-            int proj = base.CreateProjectile(player, ref dir);
+            int proj = Projectile.NewProjectile(player.Center, TervaniaUtils.AdjustMagnitude(ref dir, item.shootSpeed, item.shootSpeed), ProjectileID.TendonHook, item.damage, item.knockBack, player.whoAmI);
             Main.projectile[proj].friendly = true;
             Main.projectile[proj].hostile = false;
             Main.projectile[proj].penetrate = 3;
