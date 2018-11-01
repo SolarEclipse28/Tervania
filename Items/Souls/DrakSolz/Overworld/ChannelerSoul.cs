@@ -6,12 +6,12 @@ namespace Tervania.Items.Souls.DrakSolz.Overworld {
         public ChannelerSoul() : base(2, Item.buyPrice(0, 10, 0, 0), "Channeler", "Increased stats. Dance dance!") { }
 
         public override void Update(Player player) {
-            player.meleeDamage *= 1.05f;
-            player.magicDamage *= 1.05f;
-            player.thrownDamage *= 1.05f;
-            player.minionDamage *= 1.05f;
-            player.rangedDamage *= 1.05f;
-            player.meleeDamage *= 1.05f;
+            player.meleeDamage *= 1.04f;
+            player.magicDamage *= 1.04f;
+            player.thrownDamage *= 1.04f;
+            player.minionDamage *= 1.04f;
+            player.rangedDamage *= 1.04f;
+            player.meleeDamage *= 1.04f;
             player.meleeSpeed *= 1.10f;
             player.moveSpeed *= 1.10f;
             player.maxRunSpeed += 2;
