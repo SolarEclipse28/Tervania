@@ -15,7 +15,7 @@ namespace Tervania.Items.Souls.Hardmode.Ice {
 
     public class IceTortoiseSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.IceTortoise) TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Hardmode.Ice.IceTortoiseSoul>());
+            if (npc.type == NPCID.IceTortoise) TervaniaUtils.DropItem(npc, 2.5f, ModContent.ItemType<Items.Souls.Hardmode.Ice.IceTortoiseSoul>());
         }
     }
 }

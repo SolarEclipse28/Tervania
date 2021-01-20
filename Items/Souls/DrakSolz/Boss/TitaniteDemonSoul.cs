@@ -20,7 +20,7 @@ namespace Tervania.Items.Souls.DrakSolz.Boss {
 
     public class TitaniteDemonSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Titanite Demon") TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.DrakSolz.Boss.TitaniteDemonSoul>());
+            if (npc.TypeName == "Titanite Demon") TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.DrakSolz.Boss.TitaniteDemonSoul>());
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class GiantShellySoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Giant Shelly") TervaniaUtils.DropItem(npc, 4f, mod.ItemType<Items.Souls.Normal.Underground.GiantShellySoul>());
+            if (npc.TypeName == "Giant Shelly") TervaniaUtils.DropItem(npc, 4f, ModContent.ItemType<Items.Souls.Normal.Underground.GiantShellySoul>());
         }
     }
 }

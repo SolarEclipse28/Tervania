@@ -16,7 +16,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class GraniteElementalSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "King Slime") TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.KingSlimeSoul>());
+            if (npc.TypeName == "King Slime") TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.Boss.KingSlimeSoul>());
         }
     }
 }

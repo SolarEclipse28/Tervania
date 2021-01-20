@@ -27,8 +27,8 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class JellyfishSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Blue Jellyfish") TervaniaUtils.DropItem(npc, 4f, mod.ItemType<Items.Souls.Normal.Underground.JellyfishSoul>());
-            if (npc.TypeName == "Pink Jellyfish") TervaniaUtils.DropItem(npc, 4f, mod.ItemType<Items.Souls.Normal.Underground.JellyfishSoul>());
+            if (npc.TypeName == "Blue Jellyfish") TervaniaUtils.DropItem(npc, 4f, ModContent.ItemType<Items.Souls.Normal.Underground.JellyfishSoul>());
+            if (npc.TypeName == "Pink Jellyfish") TervaniaUtils.DropItem(npc, 4f, ModContent.ItemType<Items.Souls.Normal.Underground.JellyfishSoul>());
         }
     }
 }

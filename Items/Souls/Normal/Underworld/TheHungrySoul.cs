@@ -32,7 +32,7 @@ namespace Tervania.Items.Souls.Normal.Underworld
     {
         public override void NPCLoot(NPC npc)
         {
-            if (npc.TypeName == "The Hungry") TervaniaUtils.DropItem(npc, 1.5f, mod.ItemType<Items.Souls.Normal.Underworld.TheHungrySoul>());
+            if (npc.TypeName == "The Hungry") TervaniaUtils.DropItem(npc, 1.5f, ModContent.ItemType<Items.Souls.Normal.Underworld.TheHungrySoul>());
         }
     }
 }

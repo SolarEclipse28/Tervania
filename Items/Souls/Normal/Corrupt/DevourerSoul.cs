@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Normal.Corrupt {
 
     public class DevourerSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Devourer") TervaniaUtils.DropItem(npc, 4f, mod.ItemType<Items.Souls.Normal.Corrupt.DevourerSoul>());
+            if (npc.TypeName == "Devourer") TervaniaUtils.DropItem(npc, 4f, ModContent.ItemType<Items.Souls.Normal.Corrupt.DevourerSoul>());
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class UndeadMinerSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Undead Miner") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Underground.UndeadMinerSoul>());
+            if (npc.TypeName == "Undead Miner") TervaniaUtils.DropItem(npc, 5f, ModContent.ItemType<Items.Souls.Normal.Underground.UndeadMinerSoul>());
         }
     }
 }

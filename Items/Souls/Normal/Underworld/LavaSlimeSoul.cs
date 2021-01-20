@@ -13,7 +13,7 @@ namespace Tervania.Items.Souls.Normal.Underworld {
 
     public class LavaSlimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.LavaSlime) TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Underworld.LavaSlimeSoul>());
+            if (npc.type == NPCID.LavaSlime) TervaniaUtils.DropItem(npc, 2.5f, ModContent.ItemType<Items.Souls.Normal.Underworld.LavaSlimeSoul>());
         }
     }
 }

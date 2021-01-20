@@ -15,7 +15,7 @@ namespace Tervania.Items.Souls.Normal.Corrupt {
 
     public class CorruptGoldfishSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Corrupt Goldfish") TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Corrupt.CorruptGoldfishSoul>());
+            if (npc.TypeName == "Corrupt Goldfish") TervaniaUtils.DropItem(npc, 1f, ModContent.ItemType<Items.Souls.Normal.Corrupt.CorruptGoldfishSoul>());
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
     public class DemonEyeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Demon Eye") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Overworld.DemonEyeSoul>());
+            if (npc.TypeName == "Demon Eye") TervaniaUtils.DropItem(npc, 2f, ModContent.ItemType<Items.Souls.Normal.Overworld.DemonEyeSoul>());
         }
     }
 }

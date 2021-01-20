@@ -16,7 +16,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class CochinealBeetleSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Cochineal Beetle") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Underground.CochinealBeetleSoul>());
+            if (npc.TypeName == "Cochineal Beetle") TervaniaUtils.DropItem(npc, 5f, ModContent.ItemType<Items.Souls.Normal.Underground.CochinealBeetleSoul>());
         }
     }
 }

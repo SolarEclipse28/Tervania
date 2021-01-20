@@ -15,7 +15,7 @@ namespace Tervania.Items.Souls.DrakSolz.Overworld {
 
     public class RavelordSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Ravelord") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.DrakSolz.Overworld.RavelordSoul>());
+            if (npc.TypeName == "Ravelord") TervaniaUtils.DropItem(npc, 2f, ModContent.ItemType<Items.Souls.DrakSolz.Overworld.RavelordSoul>());
         }
     }
 }

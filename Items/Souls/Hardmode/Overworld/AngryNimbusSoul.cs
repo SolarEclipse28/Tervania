@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Hardmode.Overworld {
 
     public class AngryNimbusSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Angry Nimbus") TervaniaUtils.DropItem(npc, 3.5f, mod.ItemType<Items.Souls.Hardmode.Overworld.AngryNimbusSoul>());
+            if (npc.TypeName == "Angry Nimbus") TervaniaUtils.DropItem(npc, 3.5f, ModContent.ItemType<Items.Souls.Hardmode.Overworld.AngryNimbusSoul>());
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Tervania.Items.Souls.DrakSolz.Boss {
 
     public class AbyssStalkerSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Abyss-Stalker Arter Rias") TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.DrakSolz.Boss.AbyssStalkerSoul>());
+            if (npc.TypeName == "Abyss-Stalker Arter Rias") TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.DrakSolz.Boss.AbyssStalkerSoul>());
         }
     }
 }

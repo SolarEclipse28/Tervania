@@ -16,7 +16,7 @@ namespace Tervania.Items.Souls.DrakSolz.Overworld {
 
     public class HallowDogSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Hallow Dog") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.DrakSolz.Overworld.HallowDogSoul>());
+            if (npc.TypeName == "Hallow Dog") TervaniaUtils.DropItem(npc, 2.5f, ModContent.ItemType<Items.Souls.DrakSolz.Overworld.HallowDogSoul>());
         }
     }
 }

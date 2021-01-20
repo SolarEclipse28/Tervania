@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Corrupt {
 
     public class CorruptBunnySoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Corrupt Bunny") TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Corrupt.CorruptBunnySoul>());
+            if (npc.TypeName == "Corrupt Bunny") TervaniaUtils.DropItem(npc, 1f, ModContent.ItemType<Items.Souls.Normal.Corrupt.CorruptBunnySoul>());
         }
     }
 }

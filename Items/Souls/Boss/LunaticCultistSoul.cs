@@ -25,7 +25,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class LunaticCultistSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.CultistBoss) TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.LunaticCultistSoul>());
+            if (npc.type == NPCID.CultistBoss) TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.Boss.LunaticCultistSoul>());
         }
     }
 }

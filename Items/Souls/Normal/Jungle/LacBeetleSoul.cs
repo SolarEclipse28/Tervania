@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Jungle {
 
     public class LacBeetleSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Lac Beetle") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Jungle.LacBeetleSoul>());
+            if (npc.TypeName == "Lac Beetle") TervaniaUtils.DropItem(npc, 5f, ModContent.ItemType<Items.Souls.Normal.Jungle.LacBeetleSoul>());
         }
     }
 }

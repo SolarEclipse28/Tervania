@@ -16,7 +16,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
     public class DripplerSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Drippler") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Overworld.DripplerSoul>());
+            if (npc.TypeName == "Drippler") TervaniaUtils.DropItem(npc, 2.5f, ModContent.ItemType<Items.Souls.Normal.Overworld.DripplerSoul>());
         }
     }
 }

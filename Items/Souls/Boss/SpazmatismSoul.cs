@@ -18,7 +18,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class SpazmatismSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Spazmatism") TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.SpazmatismSoul>());
+            if (npc.TypeName == "Spazmatism") TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.Boss.SpazmatismSoul>());
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Tervania.Items.Souls.Normal.Corrupt {
 
     public class EaterofSoulsSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Eater of Souls") TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Corrupt.EaterofSoulsSoul>());
+            if (npc.TypeName == "Eater of Souls") TervaniaUtils.DropItem(npc, 1f, ModContent.ItemType<Items.Souls.Normal.Corrupt.EaterofSoulsSoul>());
         }
     }
 }

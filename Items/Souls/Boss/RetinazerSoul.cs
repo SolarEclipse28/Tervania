@@ -29,7 +29,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class RetinazerSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.Retinazer) TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.RetinazerSoul>());
+            if (npc.type == NPCID.Retinazer) TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.Boss.RetinazerSoul>());
         }
     }
 }

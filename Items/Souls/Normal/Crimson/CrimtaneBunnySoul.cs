@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Crimson {
 
     public class CrimtaneBunnySoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Crimtane Bunny") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Crimson.CrimtaneBunnySoul>());
+            if (npc.TypeName == "Crimtane Bunny") TervaniaUtils.DropItem(npc, 2f, ModContent.ItemType<Items.Souls.Normal.Crimson.CrimtaneBunnySoul>());
         }
     }
 }

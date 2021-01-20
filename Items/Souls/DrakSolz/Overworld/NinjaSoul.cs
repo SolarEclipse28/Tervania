@@ -17,7 +17,7 @@ namespace Tervania.Items.Souls.DrakSolz.Overworld {
 
     public class NinjaSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Ninja") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.DrakSolz.Overworld.NinjaSoul>());
+            if (npc.TypeName == "Ninja") TervaniaUtils.DropItem(npc, 2.5f, ModContent.ItemType<Items.Souls.DrakSolz.Overworld.NinjaSoul>());
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Tervania.Items.Souls.Normal.Underworld {
 
     public class HellbatSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Hellbat") TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Underworld.HellbatSoul>());
+            if (npc.TypeName == "Hellbat") TervaniaUtils.DropItem(npc, 1f, ModContent.ItemType<Items.Souls.Normal.Underworld.HellbatSoul>());
         }
     }
 }

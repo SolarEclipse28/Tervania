@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
     public class SquidSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Squid") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Overworld.SquidSoul>());
+            if (npc.TypeName == "Squid") TervaniaUtils.DropItem(npc, 5f, ModContent.ItemType<Items.Souls.Normal.Overworld.SquidSoul>());
         }
     }
 }

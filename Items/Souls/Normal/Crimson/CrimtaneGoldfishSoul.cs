@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Normal.Crimson {
 
     public class CrimtaneGoldfishSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Crimtane Goldfish") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Crimson.CrimtaneGoldfishSoul>());
+            if (npc.TypeName == "Crimtane Goldfish") TervaniaUtils.DropItem(npc, 2f, ModContent.ItemType<Items.Souls.Normal.Crimson.CrimtaneGoldfishSoul>());
         }
     }
 }

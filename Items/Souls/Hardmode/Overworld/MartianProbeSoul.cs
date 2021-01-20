@@ -31,7 +31,7 @@ namespace Tervania.Items.Souls.Hardmode.Overworld {
 
     public class MartianProbeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.MartianProbe) TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Hardmode.Overworld.MartianProbeSoul>());
+            if (npc.type == NPCID.MartianProbe) TervaniaUtils.DropItem(npc, 1f, ModContent.ItemType<Items.Souls.Hardmode.Overworld.MartianProbeSoul>());
         }
     }
 }

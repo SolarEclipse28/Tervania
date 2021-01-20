@@ -50,14 +50,14 @@ namespace Tervania {
         }
 
         /*public override void PostUpdateBuffs() {
-            if (player.armor[0].type == mod.ItemType<Items.Armor.Channeler.ChannelerHelmet>() &&
-                player.armor[1].type == mod.ItemType<Items.Armor.Channeler.ChannelerRobe>() &&
-                player.armor[2].type == mod.ItemType<Items.Armor.Channeler.ChannelerSkirt>())
+            if (player.armor[0].type == ModContent.ItemType<Items.Armor.Channeler.ChannelerHelmet>() &&
+                player.armor[1].type == ModContent.ItemType<Items.Armor.Channeler.ChannelerRobe>() &&
+                player.armor[2].type == ModContent.ItemType<Items.Armor.Channeler.ChannelerSkirt>())
                 player.extraAccessorySlots += 1;
 
             for (int n = 3; n < 8 + player.extraAccessorySlots; n++) {
                 Item item = player.armor[n];
-                if (item.type == mod.ItemType<Items.Accessory.RingTinyBeing>()) {
+                if (item.type == ModContent.ItemType<Items.Accessory.RingTinyBeing>()) {
                     player.statLifeMax2 += 20;
                 }
             }
@@ -129,7 +129,7 @@ namespace Tervania {
 
         public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath) {
             Item item = new Item();
-            item.netDefaults(mod.ItemType<Items.Misc.InfoBook>());
+            item.netDefaults(ModContent.ItemType<Items.Misc.InfoBook>());
             items.Add(item);
         }
 

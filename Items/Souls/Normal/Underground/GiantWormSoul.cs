@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class GreenSlimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Giant Worm") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Underground.GiantWormSoul>());
+            if (npc.TypeName == "Giant Worm") TervaniaUtils.DropItem(npc, 2f, ModContent.ItemType<Items.Souls.Normal.Underground.GiantWormSoul>());
         }
     }
 }

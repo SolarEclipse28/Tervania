@@ -17,7 +17,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class QueenBeeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Queen Bee") TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.QueenBeeSoul>());
+            if (npc.TypeName == "Queen Bee") TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.Boss.QueenBeeSoul>());
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.DrakSolz.Overworld {
 
     public class InhumanitySoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Inhumanity") TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.DrakSolz.Overworld.InhumanitySoul>());
+            if (npc.TypeName == "Inhumanity") TervaniaUtils.DropItem(npc, 1f, ModContent.ItemType<Items.Souls.DrakSolz.Overworld.InhumanitySoul>());
         }
     }
 }

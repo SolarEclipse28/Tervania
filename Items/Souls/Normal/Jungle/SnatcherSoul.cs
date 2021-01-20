@@ -28,7 +28,7 @@ namespace Tervania.Items.Souls.Normal.Jungle {
 
     public class SnatcherSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Snatcher") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Jungle.SnatcherSoul>());
+            if (npc.TypeName == "Snatcher") TervaniaUtils.DropItem(npc, 5f, ModContent.ItemType<Items.Souls.Normal.Jungle.SnatcherSoul>());
         }
     }
 }

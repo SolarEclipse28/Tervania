@@ -29,7 +29,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class PlanteraSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.Plantera) TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.PlanteraSoul>());
+            if (npc.type == NPCID.Plantera) TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.Boss.PlanteraSoul>());
         }
     }
 }

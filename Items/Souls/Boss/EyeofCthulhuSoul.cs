@@ -19,7 +19,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class EyeofCthulhuSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Eye of Cthulhu") TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.EyeofCthulhuSoul>());
+            if (npc.TypeName == "Eye of Cthulhu") TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.Boss.EyeofCthulhuSoul>());
         }
     }
 }

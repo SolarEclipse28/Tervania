@@ -28,7 +28,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class WallofFleshSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.WallofFlesh) TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.WallofFleshSoul>());
+            if (npc.type == NPCID.WallofFlesh) TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.Boss.WallofFleshSoul>());
         }
     }
 }

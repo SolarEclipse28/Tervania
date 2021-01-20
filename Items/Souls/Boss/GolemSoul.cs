@@ -15,7 +15,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class GolemSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Golem") TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.GolemSoul>());
+            if (npc.TypeName == "Golem") TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.Boss.GolemSoul>());
         }
     }
 }

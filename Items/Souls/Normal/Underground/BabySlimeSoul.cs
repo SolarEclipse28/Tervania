@@ -13,7 +13,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class BabySlimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Baby Slime") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Underground.BabySlimeSoul>());
+            if (npc.TypeName == "Baby Slime") TervaniaUtils.DropItem(npc, 2f, ModContent.ItemType<Items.Souls.Normal.Underground.BabySlimeSoul>());
         }
     }
 }

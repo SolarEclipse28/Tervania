@@ -16,7 +16,7 @@ namespace Tervania.Items.Souls.DrakSolz.Overworld {
 
     public class DesertSorceressSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Desert Sorceress") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.DrakSolz.Overworld.DesertSorceressSoul>());
+            if (npc.TypeName == "Desert Sorceress") TervaniaUtils.DropItem(npc, 2f, ModContent.ItemType<Items.Souls.DrakSolz.Overworld.DesertSorceressSoul>());
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Tervania.Items.Souls.DrakSolz.Overworld {
 
     public class ChannelerSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Channeler") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.DrakSolz.Overworld.ChannelerSoul>());
+            if (npc.TypeName == "Channeler") TervaniaUtils.DropItem(npc, 5f, ModContent.ItemType<Items.Souls.DrakSolz.Overworld.ChannelerSoul>());
         }
     }
 }

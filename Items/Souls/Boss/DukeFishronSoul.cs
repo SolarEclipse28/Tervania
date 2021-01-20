@@ -29,7 +29,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class DukeFishronSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.DukeFishron) TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.DukeFishronSoul>());
+            if (npc.type == NPCID.DukeFishron) TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.Boss.DukeFishronSoul>());
         }
     }
 }

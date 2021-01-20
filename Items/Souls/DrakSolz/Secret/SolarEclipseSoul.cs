@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.DrakSolz.Secret {
                 item.mana = IMana;
                 item.knockBack = 10.0f;
                 item.shootSpeed = 10.0f;
-                item.shoot = mod.ProjectileType<SolarProj>();
+                item.shoot = ModContent.ProjectileType<SolarProj>();
             }
 
             public override int CreateProjectile(Player player, ref Microsoft.Xna.Framework.Vector2 dir) {
@@ -97,7 +97,7 @@ namespace Tervania.Items.Souls.DrakSolz.Secret {
 
             public class SolarEclipseSoulDrop : GlobalNPC {
                 public override void NPCLoot(NPC npc) {
-                    if (npc.type >= -65) TervaniaUtils.DropItem(npc, 0.001f, mod.ItemType<Items.Souls.DrakSolz.Secret.SolarEclipseSoul>());
+                    if (npc.type >= -65) TervaniaUtils.DropItem(npc, 0.001f, ModContent.ItemType<Items.Souls.DrakSolz.Secret.SolarEclipseSoul>());
                 }
             }
         }

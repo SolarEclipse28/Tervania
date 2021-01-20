@@ -13,7 +13,7 @@ namespace Tervania.Items.Souls.Normal.Desert {
 
     public class TombCrawlerSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Tomb Crawler") TervaniaUtils.DropItem(npc, 4f, mod.ItemType<Items.Souls.Normal.Desert.TombCrawlerSoul>());
+            if (npc.TypeName == "Tomb Crawler") TervaniaUtils.DropItem(npc, 4f, ModContent.ItemType<Items.Souls.Normal.Desert.TombCrawlerSoul>());
         }
     }
 }

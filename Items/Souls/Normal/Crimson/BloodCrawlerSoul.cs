@@ -30,7 +30,7 @@ namespace Tervania.Items.Souls.Normal.Crimson
     {
         public override void NPCLoot(NPC npc)
         {
-            if (npc.TypeName == "Blood Crawler") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Crimson.BloodCrawlerSoul>());
+            if (npc.TypeName == "Blood Crawler") TervaniaUtils.DropItem(npc, 2f, ModContent.ItemType<Items.Souls.Normal.Crimson.BloodCrawlerSoul>());
         }
     }
 }

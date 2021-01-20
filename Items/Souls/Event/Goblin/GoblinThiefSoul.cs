@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Event.Goblin {
 
     public class GoblinThiefSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Goblin Thief") TervaniaUtils.DropItem(npc, 4f, mod.ItemType<Items.Souls.Event.Goblin.GoblinThiefSoul>());
+            if (npc.TypeName == "Goblin Thief") TervaniaUtils.DropItem(npc, 4f, ModContent.ItemType<Items.Souls.Event.Goblin.GoblinThiefSoul>());
         }
     }
 }

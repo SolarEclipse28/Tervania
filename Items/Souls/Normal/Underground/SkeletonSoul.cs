@@ -27,7 +27,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class SkeletonSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.Skeleton) TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.Normal.Underground.SkeletonSoul>());
+            if (npc.type == NPCID.Skeleton) TervaniaUtils.DropItem(npc, 5f, ModContent.ItemType<Items.Souls.Normal.Underground.SkeletonSoul>());
         }
     }
 }

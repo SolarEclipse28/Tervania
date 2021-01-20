@@ -12,7 +12,7 @@ namespace Tervania.Items.Souls.Normal.Crimson {
 
     public class CreeperSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Creeper") TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Normal.Crimson.CreeperSoul>());
+            if (npc.TypeName == "Creeper") TervaniaUtils.DropItem(npc, 1f, ModContent.ItemType<Items.Souls.Normal.Crimson.CreeperSoul>());
         }
     }
 }

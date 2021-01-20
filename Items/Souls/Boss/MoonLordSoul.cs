@@ -33,7 +33,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class MoonLordSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type == NPCID.MoonLordCore) TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.MoonLordSoul>());
+            if (npc.type == NPCID.MoonLordCore) TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.Boss.MoonLordSoul>());
         }
     }
 }

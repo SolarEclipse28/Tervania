@@ -19,7 +19,7 @@ namespace Tervania.Items.Souls.DrakSolz.Overworld {
 
     public class ManEaterShellSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Man Eater Shell") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.DrakSolz.Overworld.ManEaterShellSoul>());
+            if (npc.TypeName == "Man Eater Shell") TervaniaUtils.DropItem(npc, 2.5f, ModContent.ItemType<Items.Souls.DrakSolz.Overworld.ManEaterShellSoul>());
         }
     }
 }

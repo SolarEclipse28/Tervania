@@ -27,7 +27,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class HopliteSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Hoplite") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Underground.HopliteSoul>());
+            if (npc.TypeName == "Hoplite") TervaniaUtils.DropItem(npc, 2f, ModContent.ItemType<Items.Souls.Normal.Underground.HopliteSoul>());
         }
     }
 }

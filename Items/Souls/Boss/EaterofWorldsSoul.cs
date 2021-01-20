@@ -29,7 +29,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class EaterofWorldsSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Eater of Worlds") TervaniaUtils.DropItem(npc, 1f, mod.ItemType<Items.Souls.Boss.EaterofWorldsSoul>());
+            if (npc.TypeName == "Eater of Worlds") TervaniaUtils.DropItem(npc, 1f, ModContent.ItemType<Items.Souls.Boss.EaterofWorldsSoul>());
         }
     }
 }

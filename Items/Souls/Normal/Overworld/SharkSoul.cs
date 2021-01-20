@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
     public class SharkSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Shark") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Overworld.SharkSoul>());
+            if (npc.TypeName == "Shark") TervaniaUtils.DropItem(npc, 2.5f, ModContent.ItemType<Items.Souls.Normal.Overworld.SharkSoul>());
         }
     }
 }

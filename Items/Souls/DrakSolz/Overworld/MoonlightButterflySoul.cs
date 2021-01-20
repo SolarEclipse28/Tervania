@@ -23,7 +23,7 @@ namespace Tervania.Items.Souls.DrakSolz.Overworld {
 
     public class MoonlightButterflySoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Moonlight Butterfly") TervaniaUtils.DropItem(npc, 4f, mod.ItemType<Items.Souls.DrakSolz.Overworld.MoonlightButterflySoul>());
+            if (npc.TypeName == "Moonlight Butterfly") TervaniaUtils.DropItem(npc, 4f, ModContent.ItemType<Items.Souls.DrakSolz.Overworld.MoonlightButterflySoul>());
         }
     }
 }

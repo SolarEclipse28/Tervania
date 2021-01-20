@@ -15,7 +15,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class SkeletronPrimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Skeletron Prime") TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.SkeletronPrimeSoul>());
+            if (npc.TypeName == "Skeletron Prime") TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.Boss.SkeletronPrimeSoul>());
         }
     }
 }

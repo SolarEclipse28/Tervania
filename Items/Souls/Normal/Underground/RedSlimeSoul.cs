@@ -16,7 +16,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class RedSlimeSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Red Slime") TervaniaUtils.DropItem(npc, 4f, mod.ItemType<Items.Souls.Normal.Underground.RedSlimeSoul>());
+            if (npc.TypeName == "Red Slime") TervaniaUtils.DropItem(npc, 4f, ModContent.ItemType<Items.Souls.Normal.Underground.RedSlimeSoul>());
         }
     }
 }

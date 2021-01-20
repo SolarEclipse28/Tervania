@@ -21,7 +21,7 @@ namespace Tervania.Items.Souls.DrakSolz.Secret {
 
     public class XahlicemSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.type >= -65) TervaniaUtils.DropItem(npc, 0.001f, mod.ItemType<Items.Souls.DrakSolz.Secret.XahlicemSoul>());
+            if (npc.type >= -65) TervaniaUtils.DropItem(npc, 0.001f, ModContent.ItemType<Items.Souls.DrakSolz.Secret.XahlicemSoul>());
         }
     }
 }

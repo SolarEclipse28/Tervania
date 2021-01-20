@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class GraniteElementalSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Granite Elemental") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Underground.GraniteElementalSoul>());
+            if (npc.TypeName == "Granite Elemental") TervaniaUtils.DropItem(npc, 2f, ModContent.ItemType<Items.Souls.Normal.Underground.GraniteElementalSoul>());
         }
     }
 }

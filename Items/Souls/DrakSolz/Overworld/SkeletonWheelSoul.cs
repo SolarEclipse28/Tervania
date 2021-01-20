@@ -14,7 +14,7 @@ namespace Tervania.Items.Souls.DrakSolz.Overworld {
 
     public class SkeletonWheelSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Skeleton Wheel") TervaniaUtils.DropItem(npc, 5f, mod.ItemType<Items.Souls.DrakSolz.Overworld.SkeletonWheelSoul>());
+            if (npc.TypeName == "Skeleton Wheel") TervaniaUtils.DropItem(npc, 5f, ModContent.ItemType<Items.Souls.DrakSolz.Overworld.SkeletonWheelSoul>());
         }
     }
 }

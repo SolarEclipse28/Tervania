@@ -28,7 +28,7 @@ namespace Tervania.Items.Souls.Normal.Underground {
 
     public class NymphSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Nymph") TervaniaUtils.DropItem(npc, 10.0f, mod.ItemType<Items.Souls.Normal.Underground.NymphSoul>());
+            if (npc.TypeName == "Nymph") TervaniaUtils.DropItem(npc, 10.0f, ModContent.ItemType<Items.Souls.Normal.Underground.NymphSoul>());
         }
     }
 }

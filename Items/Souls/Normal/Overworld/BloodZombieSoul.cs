@@ -26,7 +26,7 @@ namespace Tervania.Items.Souls.Normal.Overworld {
 
     public class BloodZombieSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Blood Zombie") TervaniaUtils.DropItem(npc, 2f, mod.ItemType<Items.Souls.Normal.Overworld.BloodZombieSoul>());
+            if (npc.TypeName == "Blood Zombie") TervaniaUtils.DropItem(npc, 2f, ModContent.ItemType<Items.Souls.Normal.Overworld.BloodZombieSoul>());
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Tervania.Items.Souls.Boss {
 
     public class TheDestroyerSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "The Destroyer") TervaniaUtils.DropItem(npc, 10f, mod.ItemType<Items.Souls.Boss.TheDestroyerSoul>());
+            if (npc.TypeName == "The Destroyer") TervaniaUtils.DropItem(npc, 10f, ModContent.ItemType<Items.Souls.Boss.TheDestroyerSoul>());
         }
     }
 }

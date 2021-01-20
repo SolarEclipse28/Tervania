@@ -13,7 +13,7 @@ namespace Tervania.Items.Souls.Normal.Jungle {
 
     public class PiranhaSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Piranha") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Normal.Jungle.PiranhaSoul>());
+            if (npc.TypeName == "Piranha") TervaniaUtils.DropItem(npc, 2.5f, ModContent.ItemType<Items.Souls.Normal.Jungle.PiranhaSoul>());
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Tervania.Items.Souls.Hardmode.Desert {
 
     public class DuneSplicerSoulDrop : GlobalNPC {
         public override void NPCLoot(NPC npc) {
-            if (npc.TypeName == "Dune Splicer") TervaniaUtils.DropItem(npc, 2.5f, mod.ItemType<Items.Souls.Hardmode.Desert.DuneSplicerSoul>());
+            if (npc.TypeName == "Dune Splicer") TervaniaUtils.DropItem(npc, 2.5f, ModContent.ItemType<Items.Souls.Hardmode.Desert.DuneSplicerSoul>());
         }
     }
 }
